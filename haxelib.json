@@ -1,0 +1,11 @@
+{
+	"name": "CreateJS",
+	"url": "https://github.com/VolkovRA/HaxeCreateJS/blob/master/README.md",
+	"license": "MIT",
+	"tags": ["createjs", "easeljs", "tweenjs", "soundjs", "preloadjs", "html5", "canvas"],
+	"description": "The Haxe externs for CreateJS",
+	"version": "1.0.0",
+	"releasenote": "Release",
+	"contributors": ["VolkovRA"],
+	"classPath": "src"
+}
