@@ -1,6 +1,5 @@
 package easeljs.graphics;
 
-import haxe.extern.EitherType;
 import js.html.CanvasElement;
 import js.html.CanvasRenderingContext2D;
 import js.html.ImageElement;
@@ -52,7 +51,9 @@ extern class Fill implements ICommand
 	 * @param	repetition	Options of repeat image.
 	 * @return	Returns this Fill object for chaining or assignment.
 	 */
-	public function bitmap(image:EitherType<ImageElement, EitherType<CanvasElement, VideoElement>>, ?repetition:RepeatType):Fill;
+	@:overload(function(image:VideoElement, ?repetition:RepeatType):Fill{})
+	@:overload(function(image:CanvasElement, ?repetition:RepeatType):Fill{})
+	public function bitmap(image:ImageElement, ?repetition:RepeatType):Fill;
 	
 	/**
 	 * Creates a linear gradient style and assigns it to Fill/style:property.
