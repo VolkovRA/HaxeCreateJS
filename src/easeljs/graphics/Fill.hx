@@ -40,9 +40,12 @@ extern class Fill implements ICommand
 	
 	/**
 	 * Execute the Graphics command in the provided Canvas context.
-	 * @param	context Provided Canvas context.
+	 * @param	context	Provided Canvas context.
+	 * @param	data	Optional data that is passed to graphics command exec methods.
+	 * 					When called from a Shape instance, the shape passes itself as the data parameter.
+	 * 					This can be used by custom graphic commands to insert contextual data.
 	 */
-	public function exec(context:CanvasRenderingContext2D):Void;
+	function exec(context:CanvasRenderingContext2D, data:Dynamic = null):Void;
 	
 	/**
 	 * Creates a bitmap fill style and assigns it to the Fill/style:property.
