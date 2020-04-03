@@ -1,4 +1,4 @@
-package easeljs;
+package easeljs.filters;
 
 import js.html.CanvasRenderingContext2D;
 import js.html.webgl.RenderingContext;
@@ -67,7 +67,7 @@ extern class Filter
 									height:Float,
 									?target:CanvasRenderingContext2D,
 									?targeX:Float,
-									?targeY:Float,
+									?targeY:Float
 	):Bool;
 	
 	/**
