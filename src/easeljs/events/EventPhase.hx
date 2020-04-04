@@ -1,4 +1,4 @@
-package easeljs;
+package easeljs.events;
 
 /**
  * The EventPhase class provides values for property of the Event class.

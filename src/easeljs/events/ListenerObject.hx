@@ -1,4 +1,4 @@
-package easeljs;
+package easeljs.events;
 
 /**
  * Event listener as some object.

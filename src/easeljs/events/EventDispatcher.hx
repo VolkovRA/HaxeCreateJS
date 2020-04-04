@@ -1,4 +1,4 @@
-package easeljs;
+package easeljs.events;
 
 /**
  * EventDispatcher provides methods for managing queues of event listeners and dispatching events.

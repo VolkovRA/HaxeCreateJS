@@ -1,4 +1,4 @@
-package easeljs;
+package easeljs.events;
 
 import haxe.extern.EitherType;
 
