@@ -1,5 +1,6 @@
 package easeljs.filters;
 
+import easeljs.geom.Rectangle;
 import js.html.CanvasRenderingContext2D;
 import js.html.webgl.RenderingContext;
 import js.html.webgl.Shader;
