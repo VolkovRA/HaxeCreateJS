@@ -1,4 +1,4 @@
-package easeljs;
+package easeljs.display;
 
 /**
  * The type of compositing operation to apply when drawing new shapes.

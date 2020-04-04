@@ -1,4 +1,6 @@
-package easeljs;
+package easeljs.display;
+
+import easeljs.geom.Matrix2D;
 
 /**
  * Used for calculating and encapsulating display related properties.

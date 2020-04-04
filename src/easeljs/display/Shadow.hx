@@ -1,4 +1,4 @@
-package easeljs;
+package easeljs.display;
 
 /**
  * This class encapsulates the properties required to define a shadow to apply to a DisplayObject via its shadow property.

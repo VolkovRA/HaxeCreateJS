@@ -1,5 +1,11 @@
-package easeljs;
+package easeljs.display;
 
+import easeljs.events.EventDispatcher;
+import easeljs.filters.Filter;
+import easeljs.geom.Matrix2D;
+import easeljs.geom.Point;
+import easeljs.geom.Rectangle;
+import easeljs.ui.MouseCursor;
 import js.html.CanvasElement;
 import js.html.CanvasRenderingContext2D;
 
@@ -148,6 +154,7 @@ extern class DisplayObject extends EventDispatcher
 	 * Default: 0
 	 */
 	@:deprecated
+	@:noCompletion
 	public var cacheID(default, null):Float;
 	
 	/**
@@ -164,7 +171,7 @@ extern class DisplayObject extends EventDispatcher
 	 * Setting a non-null cursor on a Container will override the cursor set on its descendants.
 	 * Default: null
 	 */
-	public var cursor:CursorType;
+	public var cursor:MouseCursor;
 	
 	/**
 	 * An array of Filter objects to apply to this display object.
@@ -323,9 +330,10 @@ extern class DisplayObject extends EventDispatcher
 	 * Returns a clone of this DisplayObject.
 	 * Some properties that are specific to this instance's current context are reverted to their defaults (for example .parent).
 	 * Caches are not maintained across clones, and some elements are copied by reference (masks, individual filter instances, hit area)
-	 * @return A clone of the current DisplayObject instance.
+	 * @param	recursive Copying internal objects. (Not used in DisplayObject, but can be useful for overriding functionality)
+	 * @return	A clone of the current DisplayObject instance.
 	 */
-	public function clone():DisplayObject;
+	public function clone(recursive:Bool = false):DisplayObject;
 	
 	/**
 	 * Draws the display object into the specified context ignoring its visible, alpha, shadow, and transform.
@@ -388,6 +396,7 @@ extern class DisplayObject extends EventDispatcher
 	 * Use the stage property instead.
 	 */
 	@:deprecated
+	@:noCompletion
 	public function getStage():Stage;
 	
 	/**
@@ -508,7 +517,7 @@ extern class DisplayObject extends EventDispatcher
 	 * This allows for easier interaction and alternate cache methods like WebGL and StageGL.
 	 * @param	operation The compositeOperation to use, or null to clear the cache and redraw it.
 	 */
-	public function updateCache(operation:CompositeOperation = null):Void;
+	public function updateCache(?operation:CompositeOperation):Void;
 	
 	/**
 	 * Applies this display object's transformation, alpha, globalCompositeOperation, clipping path (mask),
@@ -516,6 +525,12 @@ extern class DisplayObject extends EventDispatcher
 	 * @param	context The canvas 2D to update.
 	 */
 	public function updateContext(context:CanvasRenderingContext2D):Void;
+	
+	
+	
+	//////////////////
+	//   OVERRIDE   //
+	//////////////////
 	
 	/**
 	 * Returns a string representation of this DisplayObject.
