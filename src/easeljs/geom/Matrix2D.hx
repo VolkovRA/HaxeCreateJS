@@ -1,4 +1,4 @@
-package easeljs;
+package easeljs.geom;
 
 /**
  * Represents an affine transformation matrix, and provides tools for constructing and concatenating matrices.

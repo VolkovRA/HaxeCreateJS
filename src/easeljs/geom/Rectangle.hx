@@ -1,4 +1,4 @@
-package easeljs;
+package easeljs.geom;
 
 /**
  * Represents a rectangle as defined by the points (x, y) and (x+width, y+height).

@@ -1,4 +1,4 @@
-package easeljs;
+package easeljs.geom;
 
 import haxe.extern.EitherType;
 
