@@ -29,7 +29,6 @@ extern class StrokeDash implements ICommand
 	 * @param	segments	An array specifying the dash pattern, alternating between line and gap.
 	 * 						For example, [20,10] would create a pattern of 20 pixel lines with 10 pixel gaps between them.
 	 * 						Passing null or an empty array will clear the existing stroke dash.
-	 * 
 	 * @param	offset		The offset of the dash pattern.
 	 * 						For example, you could increment this value to create a "marching ants" effect.
 	 */

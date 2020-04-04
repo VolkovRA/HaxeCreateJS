@@ -183,15 +183,12 @@ extern class Graphics
 	 * This ends the current sub-path. A tiny API method "bf" also exists.
 	 * @param	image		The Image, Canvas, or Video object to use as the pattern.
 	 * 						Must be loaded prior to creating a bitmap fill, or the fill will be empty.
-	 * 
 	 * @param	repetition	Optional. Indicates whether to repeat the image in the fill area.
 	 * 						One of RepeatType.REPEAT, RepeatType.REPEAT_X, RepeatType.REPEAT_Y, or RepeatType.NO_REPEAT.
 	 * 						Defaults to RepeatType.REPEAT. Note that Firefox does not support RepeatType.REPEAT_X or
 	 * 						RepeatType.REPEAT_Y (latest tests were in FF 20.0), and will default to RepeatType.REPEAT.
-	 * 
 	 * @param	matrix		Optional. Specifies a transformation matrix for the bitmap fill.
 	 * 						This transformation will be applied relative to the parent transform.
-	 * 
 	 * @return	The Graphics instance the method is called on (useful for chaining calls.)
 	 */
 	@:overload(function(image:VideoElement, ?repetition:RepeatType, ?matrix:Matrix2D):Graphics{})
@@ -204,11 +201,9 @@ extern class Graphics
 	 * A tiny API method "bs" also exists.
 	 * @param	image		The Image, Canvas, or Video object to use as the pattern.
 	 * 						Must be loaded prior to creating a bitmap fill, or the fill will be empty.
-	 * 
 	 * @param	repetition	Optional. Indicates whether to repeat the image in the fill area.
 	 * 						One of RepeatType.REPEAT, RepeatType.REPEAT_X, RepeatType.REPEAT_Y, or RepeatType.NO_REPEAT.
 	 * 						Defaults to RepeatType.REPEAT.
-	 * 
 	 * @return	The Graphics instance the method is called on (useful for chaining calls.)
 	 */
 	@:overload(function(image:VideoElement, ?repetition:RepeatType):Graphics{})
@@ -518,6 +513,7 @@ extern class Graphics
 	 * Use the instructions property instead.
 	 */
 	@:deprecated
+	@:noCompletion
 	public function getInstructions():Array<ICommand>;
 	
 	/**
@@ -580,10 +576,8 @@ extern class Graphics
 	 * @param	segments	An array specifying the dash pattern, alternating between line and gap.
 	 * 						For example, [20,10] would create a pattern of 20 pixel lines with 10 pixel gaps between them.
 	 * 						Passing null or an empty array will clear the existing stroke dash.
-	 * 
 	 * @param	offset		The offset of the dash pattern.
 	 * 						For example, you could increment this value to create a "marching ants" effect.
-	 * 
 	 * @return	The Graphics instance the method is called on (useful for chaining calls.)
 	 */
 	public function setStrokeDash(segments:Array<Float> = null, offset:Float = 0):Graphics;
@@ -596,20 +590,15 @@ extern class Graphics
 	 * </code>
 	 * A tiny API method "ss" also exists.
 	 * @param	thickness	The width of the stroke.
-	 * 
 	 * @param	caps		Indicates the type of caps to use at the end of lines.
 	 * 						One of butt, round, or square. Defaults to LineCapType.BUTT.
 	 * 						Also accepts the values 0 (butt), 1 (round), and 2 (square) for use with the tiny API.
-	 * 
 	 * @param	joints		Specifies the type of joints that should be used where two lines meet.
 	 * 						One of bevel, round, or miter. Defaults to LineJoinType.MITER.
 	 * 						Also accepts the values 0 (miter), 1 (round), and 2 (bevel) for use with the tiny API.
-	 * 
 	 * @param	miterLimit	If joints is set to LineJoinType.MITER, then you can specify a miter limit ratio which controls at
 	 * 						what point a mitered joint will be clipped.
-	 * 
 	 * @param	ignoreScale	If true, the stroke will be drawn at the specified thickness regardless of active transformations.
-	 * 
 	 * @return	The Graphics instance the method is called on (useful for chaining calls.)
 	 */
 	public function setStrokeStyle(	thickness:Float,
@@ -701,15 +690,12 @@ extern class Graphics
 	 * Shortcut to beginBitmapFill.
 	 * @param	image		The Image, Canvas, or Video object to use as the pattern.
 	 * 						Must be loaded prior to creating a bitmap fill, or the fill will be empty.
-	 * 
 	 * @param	repetition	Optional. Indicates whether to repeat the image in the fill area.
 	 * 						One of RepeatType.REPEAT, RepeatType.REPEAT_X, RepeatType.REPEAT_Y, or RepeatType.NO_REPEAT.
 	 * 						Defaults to RepeatType.REPEAT. Note that Firefox does not support RepeatType.REPEAT_X or
 	 * 						RepeatType.REPEAT_Y (latest tests were in FF 20.0), and will default to RepeatType.REPEAT.
-	 * 
 	 * @param	matrix		Optional. Specifies a transformation matrix for the bitmap fill.
 	 * 						This transformation will be applied relative to the parent transform.
-	 * 
 	 * @return	The Graphics instance the method is called on (useful for chaining calls.)
 	 */
 	@:overload(function(image:VideoElement, ?repetition:RepeatType, ?matrix:Matrix2D):Graphics{})
@@ -720,11 +706,9 @@ extern class Graphics
 	 * Shortcut to beginBitmapStroke.
 	 * @param	image		The Image, Canvas, or Video object to use as the pattern.
 	 * 						Must be loaded prior to creating a bitmap fill, or the fill will be empty.
-	 * 
 	 * @param	repetition	Optional. Indicates whether to repeat the image in the fill area.
 	 * 						One of RepeatType.REPEAT, RepeatType.REPEAT_X, RepeatType.REPEAT_Y, or RepeatType.NO_REPEAT.
 	 * 						Defaults to RepeatType.REPEAT.
-	 * 
 	 * @return	The Graphics instance the method is called on (useful for chaining calls.)
 	 */
 	@:overload(function(image:VideoElement, ?repetition:RepeatType):Graphics{})
@@ -947,10 +931,8 @@ extern class Graphics
 	 * @param	segments	An array specifying the dash pattern, alternating between line and gap.
 	 * 						For example, [20,10] would create a pattern of 20 pixel lines with 10 pixel gaps between them.
 	 * 						Passing null or an empty array will clear the existing stroke dash.
-	 * 
 	 * @param	offset		The offset of the dash pattern.
 	 * 						For example, you could increment this value to create a "marching ants" effect.
-	 * 
 	 * @return	The Graphics instance the method is called on (useful for chaining calls.)
 	 */
 	public function sd(segments:Array<Float> = null, offset:Float = 0):Graphics;
@@ -958,20 +940,15 @@ extern class Graphics
 	/**
 	 * Shortcut to setStrokeStyle.
 	 * @param	thickness	The width of the stroke.
-	 * 
 	 * @param	caps		Indicates the type of caps to use at the end of lines.
 	 * 						One of butt, round, or square. Defaults to LineCapType.BUTT.
 	 * 						Also accepts the values 0 (butt), 1 (round), and 2 (square) for use with the tiny API.
-	 * 
 	 * @param	joints		Specifies the type of joints that should be used where two lines meet.
 	 * 						One of bevel, round, or miter. Defaults to LineJoinType.MITER.
 	 * 						Also accepts the values 0 (miter), 1 (round), and 2 (bevel) for use with the tiny API.
-	 * 
 	 * @param	miterLimit	If joints is set to LineJoinType.MITER, then you can specify a miter limit ratio which controls at
 	 * 						what point a mitered joint will be clipped.
-	 * 
 	 * @param	ignoreScale	If true, the stroke will be drawn at the specified thickness regardless of active transformations.
-	 * 
 	 * @return	The Graphics instance the method is called on (useful for chaining calls.)
 	 */
 	public function ss(thickness:Float, ?caps:EitherType<LineCapType, Int>, ?joints:EitherType<LineJoinType, Int>, ?miterLimit:Float = 10, ?ignoreScale:Bool = false):Graphics;
