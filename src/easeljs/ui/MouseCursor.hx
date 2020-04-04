@@ -1,12 +1,11 @@
-package easeljs;
+package easeljs.ui;
 
 /**
- * CSS Cursor type.
- * The cursor CSS property sets the type of cursor, if any, to show when the mouse pointer is over an element.
+ * The MouseCursor type is an enumeration of constant values used in setting the cursor CSS property.
  * Documentation: https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
  * @author VolkovRA
  */
-@:enum abstract CursorType(String) to String
+@:enum abstract MouseCursor(String) to String
 {
 	/////////////
 	// GENERAL //
