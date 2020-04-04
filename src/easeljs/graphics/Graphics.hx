@@ -1,5 +1,6 @@
 package easeljs.graphics;
 
+import easeljs.geom.Matrix2D;
 import haxe.DynamicAccess;
 import haxe.extern.EitherType;
 import js.html.CanvasElement;

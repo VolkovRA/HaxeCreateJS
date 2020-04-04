@@ -1,5 +1,6 @@
 package easeljs.graphics;
 
+import easeljs.geom.Matrix2D;
 import js.html.CanvasElement;
 import js.html.CanvasRenderingContext2D;
 import js.html.ImageElement;
