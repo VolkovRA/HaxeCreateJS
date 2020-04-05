@@ -1,7 +1,5 @@
 package easeljs.display;
 
-import easeljs.BitmapCacheConfig;
-import easeljs.display.CompositeOperation;
 import easeljs.geom.Rectangle;
 import js.html.CanvasRenderingContext2D;
 
@@ -236,7 +234,7 @@ extern class Sprite extends DisplayObject
 	 * 					Default is 1.
 	 * @param	options	Specify additional parameters for the cache logic.
 	 */
-	override public function cache(x:Float, y:Float, width:Float, height:Float, scale:Float = 1, options:BitmapCacheConfig = null):Void;
+	override public function cache(x:Float, y:Float, width:Float, height:Float, scale:Float = 1, options:CacheConfig = null):Void;
 	
 	/**
 	 * Returns a clone of the Sprite instance.

@@ -324,7 +324,7 @@ extern class DisplayObject extends EventDispatcher
 	 * 					Default is 1.
 	 * @param	options	Specify additional parameters for the cache logic.
 	 */
-	public function cache(x:Float, y:Float, width:Float, height:Float, scale:Float = 1, options:BitmapCacheConfig = null):Void;
+	public function cache(x:Float, y:Float, width:Float, height:Float, scale:Float = 1, options:CacheConfig = null):Void;
 	
 	/**
 	 * Returns a clone of this DisplayObject.

@@ -1,4 +1,4 @@
-package easeljs;
+package easeljs.display;
 
 import haxe.extern.EitherType;
 
@@ -6,10 +6,10 @@ import haxe.extern.EitherType;
  * Contain specify additional parameters for the cache logic.
  * Here are the detailed specifics of how to use the options object.
  * 
- *   If options.useGL is set to "new" a StageGL is created and contained on this for use when rendering the cache.
- *   If options.useGL is set to "stage" if the current stage is a StageGL it will be used. If not then it will default to "new".
- *   If options.useGL is a StageGL instance it will not create one but use the one provided.
- *   If options.useGL is undefined a Context 2D cache will be performed.
+ *   1. If options.useGL is set to "new" a StageGL is created and contained on this for use when rendering the cache.
+ *   2. If options.useGL is set to "stage" if the current stage is a StageGL it will be used. If not then it will default to "new".
+ *   3. If options.useGL is a StageGL instance it will not create one but use the one provided.
+ *   4. If options.useGL is undefined a Context 2D cache will be performed.
  * 
  * This means you can use any combination of StageGL and 2D with either, neither, or both the stage and cache being WebGL.
  * Using "new" with a StageGL display list is highly unrecommended, but still an option. It should be avoided due to
@@ -26,27 +26,29 @@ import haxe.extern.EitherType;
  * Documentation: https://www.createjs.com/docs/easeljs/classes/BitmapCache.html
  * @author VolkovRA
  */
-typedef BitmapCacheConfig =
+typedef CacheConfig =
 {
 	/**
 	 * Select whether to use context 2D, or WebGL rendering, and whether to make a new stage instance or use an existing one.
 	 * [useGL=undefined] Undefined | "new" | "stage" | StageGL
 	 */
-	@:optional var useGL:EitherType<UsingGL, StageGL>;
+	@:optional var useGL:EitherType<StageType, StageGL>;
 }
 
 /**
- * Param value of Stage instance for use.
+ * The options for select StageGL target.
  */
-@:enum abstract UsingGL(String) to String
+@:enum abstract StageType(String) to String
 {
 	/**
 	 * Use a new Stage instance.
+	 * A StageGL is created and contained on this for use when rendering the cache.
 	 */
 	var NEW = "new";
 	
 	/**
-	 * Use a existing Stage instance.
+	 * Current StageGL.
+	 * If the current stage is a StageGL it will be used, if not then it will default to "new".
 	 */
 	var STAGE = "stage";
 }

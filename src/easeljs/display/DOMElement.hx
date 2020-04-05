@@ -1,8 +1,5 @@
 package easeljs.display;
 
-import easeljs.BitmapCacheConfig;
-import easeljs.display.CompositeOperation;
-import easeljs.display.DisplayObject;
 import easeljs.geom.Point;
 import js.html.CanvasRenderingContext2D;
 import js.html.Element;
@@ -110,7 +107,7 @@ extern class DOMElement<T:Element> extends DisplayObject
 	/**
 	 * Not applicable to DOMElement.
 	 */
-	override public function cache(x:Float, y:Float, width:Float, height:Float, scale:Float = 1, options:BitmapCacheConfig = null):Void;
+	override public function cache(x:Float, y:Float, width:Float, height:Float, scale:Float = 1, options:CacheConfig = null):Void;
 	
 	/**
 	 * Not applicable to DOMElement.

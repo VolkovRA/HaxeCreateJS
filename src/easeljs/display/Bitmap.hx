@@ -1,7 +1,5 @@
 package easeljs.display;
 
-import easeljs.BitmapCacheConfig;
-import easeljs.display.CompositeOperation;
 import easeljs.geom.Rectangle;
 import haxe.extern.EitherType;
 import js.html.CanvasRenderingContext2D;
@@ -126,7 +124,7 @@ extern class Bitmap extends DisplayObject
 	 * 					Default is 1.
 	 * @param	options	Specify additional parameters for the cache logic.
 	 */
-	override public function cache(x:Float, y:Float, width:Float, height:Float, scale:Float = 1, options:BitmapCacheConfig = null):Void;
+	override public function cache(x:Float, y:Float, width:Float, height:Float, scale:Float = 1, options:CacheConfig = null):Void;
 	
 	/**
 	 * Because the content of a Bitmap is already in a simple format, cache is unnecessary for Bitmap instances.

@@ -1,5 +1,6 @@
-package easeljs;
+package easeljs.display;
 
+import easeljs.geom.Rectangle;
 import js.html.CanvasRenderingContext2D;
 
 /**
@@ -29,16 +30,22 @@ import js.html.CanvasRenderingContext2D;
 extern class BitmapCache
 {
 	/**
+	 * Create a new BitmapCache.
+	 */
+	public function new();
+	
+	/**
 	 * Track how many times the cache has been updated, mostly used for preventing duplicate cacheURLs.
 	 * This can be useful to see if a cache has been updated.
 	 * Default: 0
 	 */
 	public var cacheID:Float;
 	
-	/**
-	 * Create a new BitmapCache.
-	 */
-	public function new();
+	
+	
+	/////////////////
+	//   METHODS   //
+	///////////////// 
 	
 	/**
 	 * Actually create the correct cache surface and properties associated with it. Caching and it's
@@ -70,7 +77,7 @@ extern class BitmapCache
 	 * 					cached elements with greater fidelity. Default is 1.
 	 * @param	options	Specify additional parameters for the cache logic.
 	 */
-	public function define(x:Float, y:Float, width:Float, height:Float, scale:Float = 1, options:BitmapCacheConfig = null):Void;
+	public function define(x:Float, y:Float, width:Float, height:Float, scale:Float = 1, options:CacheConfig = null):Void;
 	
 	/**
 	 * Use context2D drawing commands to display the cache canvas being used.
@@ -110,7 +117,7 @@ extern class BitmapCache
 	 * For full details of each behaviour, check the protected functions _updateSurface and _drawToCache respectively.
 	 * @param	compositeOperation The DisplayObject this cache is linked to.
 	 */
-	public function update(compositeOperation:String = null):Void;
+	public function update(compositeOperation:CompositeOperation = null):Void;
 	
 	/**
 	 * Returns a string representation of this BitmapCache.
