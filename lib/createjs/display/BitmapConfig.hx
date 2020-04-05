@@ -11,5 +11,5 @@ typedef BitmapConfig =
 	/**
 	 * Returns a CanvasImageSource, or a string URL to an image.
 	 */
-	var getImage():EitherType<CanvasImageSource, String>;
+	var getImage:Void->EitherType<CanvasImageSource, String>;
 }

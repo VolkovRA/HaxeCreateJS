@@ -15,7 +15,7 @@ typedef TweenConfig =
 	 * Removes all existing tweens for the target when set to true.
 	 * Default: false
 	 */
-	@:optional var override:Bool;
+	//@:optional var override:Bool; // <-- Haxe has problem with reserved expression in typedef
 	
 	/**
 	 * Allows you to specify data that will be used by installed plugins.

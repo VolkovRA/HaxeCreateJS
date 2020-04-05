@@ -82,9 +82,9 @@ extern class Sprite extends DisplayObject
 	 * @param	spriteSheet			The SpriteSheet instance to play back. This includes the source image(s), frame dimensions, and frame data.
 	 * @param	frameOrAnimation	The frame number or animation to play initially.
 	 */
-	@:overload(function(spriteSheet:SpriteSheet){})
-	@:overload(function(spriteSheet:SpriteSheet, frameOrAnimation:String){})
-	public function new(spriteSheet:SpriteSheet, frameOrAnimation:Int);
+	@:overload(function(spriteSheet:SpriteSheet):Void {})
+	@:overload(function(spriteSheet:SpriteSheet, frameOrAnimation:String):Void {})
+	public function new(spriteSheet:SpriteSheet, frameOrAnimation:Int):Void;
 	
 	
 	

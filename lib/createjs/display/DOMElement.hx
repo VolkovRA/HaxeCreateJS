@@ -90,8 +90,8 @@ extern class DOMElement<T:Element> extends DisplayObject
 	 * Create a new DOMElement.
 	 * @param	element	A reference or id for the DOM element to manage.
 	 */
-	@:overload(function(id:String){})
-	public function new(element:T);
+	@:overload(function(id:String):Void {})
+	public function new(element:T):Void;
 	
 	
 	
@@ -129,7 +129,7 @@ extern class DOMElement<T:Element> extends DisplayObject
 	 * DOMElement cannot be cloned.
 	 * Throws an error.
 	 */
-	override public function clone(recursive:Bool = false):DOMElement;
+	override public function clone(recursive:Bool = false):DOMElement<T>;
 	
 	/**
 	 * Draws the display object into the specified context ignoring its visible, alpha, shadow, and transform.
