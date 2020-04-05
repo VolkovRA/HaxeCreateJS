@@ -35,6 +35,12 @@ extern class ColorMatrix
 	 */
 	public function new(brightness:Float, contrast:Float, saturation:Float, hue:Float);
 	
+	
+	
+	/////////////////
+	//   METHODS   //
+	/////////////////
+	
 	/**
 	 * Adjusts the brightness of pixel color by adding the specified value to the red, green and blue channels.
 	 * Positive values will make the image brighter, negative values will make it darker.

@@ -9,9 +9,30 @@ package easeljs.display;
 extern class Shadow 
 {
 	/**
+	 * Create a new Shadow.
+	 * @param	color	The color of the shadow. This can be any valid CSS color value.
+	 * @param	offsetX	The x offset of the shadow in pixels.
+	 * @param	offsetY	The y offset of the shadow in pixels.
+	 * @param	blur	The size of the blurring effect.
+	 */
+	public function new(color:String = "black", offsetX:Float = 0, offsetY:Float = 0, blur:Float = 0);
+	
+	
+	
+	////////////////
+	//   STATIC   //
+	////////////////
+	
+	/**
 	 * An identity shadow object (all properties are set to 0).
 	 */
 	static public var identity(default, null):Shadow;
+	
+	
+	
+	////////////////////
+	//   PROPERTIES   //
+	////////////////////
 	
 	/**
 	 * The size of the blurring effect.
@@ -37,14 +58,11 @@ extern class Shadow
 	 */
 	public var offsetY:Float;
 	
-	/**
-	 * Create a new Shadow.
-	 * @param	color	The color of the shadow. This can be any valid CSS color value.
-	 * @param	offsetX	The x offset of the shadow in pixels.
-	 * @param	offsetY	The y offset of the shadow in pixels.
-	 * @param	blur	The size of the blurring effect.
-	 */
-	public function new(color:String = "black", offsetX:Float = 0, offsetY:Float = 0, blur:Float = 0);
+	
+	
+	/////////////////
+	//   METHODS   //
+	///////////////// 
 	
 	/**
 	 * Returns a clone of this Shadow instance.

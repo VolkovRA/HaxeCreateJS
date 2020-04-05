@@ -18,14 +18,13 @@ import js.html.ImageElement;
 extern class AlphaMaskFilter extends Filter
 {
 	/**
-	 * The image (or canvas) to use as the mask.
-	 */
-	public var mask:EitherType<ImageElement, CanvasElement>;
-	
-	/**
 	 * Create a new AlphaMaskFilter.
 	 * @param	mask The image (or canvas) to use as the mask.
 	 */
 	public function new(mask:EitherType<ImageElement, CanvasElement>);
+	
+	/**
+	 * The image (or canvas) to use as the mask.
+	 */
+	public var mask:EitherType<ImageElement, CanvasElement>;
 }
-

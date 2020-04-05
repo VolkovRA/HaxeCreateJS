@@ -17,6 +17,11 @@ import js.html.CanvasRenderingContext2D;
  * caching, and mouse handlers.
  * 
  * EVENTS
+ * Event.TICK				Dispatched on each display object on a stage whenever the stage updates. This occurs immediately before the
+ * 							rendering (draw) pass. When update is called, first all display objects on the stage dispatch the tick event,
+ * 							then all of the display objects are drawn to stage. Children will have their Tick:event event dispatched in
+ * 							order of their depth prior to the event being dispatched on their parent.
+ * 
  * Event.ADDED				Dispatched when the display object is added to a parent container.
  * 
  * Event.REMOVED			Dispatched when the display object is removed from its parent container.
@@ -59,11 +64,6 @@ import js.html.CanvasRenderingContext2D;
  * MouseEvent.ROLL_OUT		This event is similar to mouseout, with the following differences: it does not bubble, and it considers Container
  * 							instances as an aggregate of their content. This event must be enabled using enableMouseOver. See the MouseEvent
  * 							class for a listing of event properties.
- * 	
- * TickEvent.TICK			Dispatched on each display object on a stage whenever the stage updates. This occurs immediately before the
- * 							rendering (draw) pass. When update is called, first all display objects on the stage dispatch the tick event,
- * 							then all of the display objects are drawn to stage. Children will have their Tick:event event dispatched in
- * 							order of their depth prior to the event being dispatched on their parent.
  * 
  * Documentation: https://www.createjs.com/docs/easeljs/classes/DisplayObject.html
  * @author VolkovRA
@@ -72,6 +72,17 @@ import js.html.CanvasRenderingContext2D;
 extern class DisplayObject extends EventDispatcher
 {
 	/**
+	 * Create a new DisplayObject.
+	 */
+	public function new();
+	
+	
+	
+	////////////////
+	//   STATIC   //
+	////////////////
+	
+	/**
 	 * Suppresses errors generated when using features like hitTest, mouse events, and GetObjectsUnderPoint with cross domain content.
 	 * Default: false
 	 */
@@ -79,9 +90,9 @@ extern class DisplayObject extends EventDispatcher
 	
 	
 	
-	////////////////
-	//   PARAMS   //
-	//////////////// 
+	////////////////////
+	//   PROPERTIES   //
+	////////////////////
 	
 	/**
 	 * Unique ID for this display object.
@@ -301,12 +312,7 @@ extern class DisplayObject extends EventDispatcher
 	
 	/////////////////
 	//   METHODS   //
-	///////////////// 
-	
-	/**
-	 * Create a new DisplayObject.
-	 */
-	public function new();
+	/////////////////
 	
 	/**
 	 * Draws the display object into a new element, which is then used for subsequent draws.

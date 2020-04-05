@@ -11,23 +11,17 @@ import haxe.extern.EitherType;
 extern class Point 
 {
 	/**
-	 * X position.
-	 * Default: 0
-	 */
-	public var x:Float;
-	
-	/**
-	 * Y position.
-	 * Default: 0
-	 */
-	public var y:Float;
-	
-	/**
 	 * Create a new Point.
 	 * @param	x X position.
 	 * @param	y Y position.
 	 */
 	public function new(x:Float = 0, y:Float = 0);
+	
+	
+	
+	////////////////
+	//   STATIC   //
+	////////////////
 	
 	/**
 	 * Determine a point between two specified points.
@@ -50,6 +44,30 @@ extern class Point
 	 * @return	The new, interpolated point.
 	 */
 	static public function polar(len:Float, angle:Float, point:EitherType<Point, Dynamic> = null):Point;
+	
+	
+	
+	////////////////////
+	//   PROPERTIES   //
+	////////////////////
+	
+	/**
+	 * X position.
+	 * Default: 0
+	 */
+	public var x:Float;
+	
+	/**
+	 * Y position.
+	 * Default: 0
+	 */
+	public var y:Float;
+	
+	
+	
+	/////////////////
+	//   METHODS   //
+	/////////////////
 	
 	/**
 	 * Returns a clone of the Point instance.

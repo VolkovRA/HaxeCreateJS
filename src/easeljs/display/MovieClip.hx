@@ -16,6 +16,11 @@ import js.html.CanvasRenderingContext2D;
  * affect properties will likely not provide the desired result.
  * 
  * EVENTS
+ * Event.TICK				Dispatched on each display object on a stage whenever the stage updates. This occurs immediately before the
+ * 							rendering (draw) pass. When update is called, first all display objects on the stage dispatch the tick event,
+ * 							then all of the display objects are drawn to stage. Children will have their Tick:event event dispatched in
+ * 							order of their depth prior to the event being dispatched on their parent.
+ * 
  * Event.ADDED				Dispatched when the display object is added to a parent container.
  * 
  * Event.REMOVED			Dispatched when the display object is removed from its parent container.
@@ -58,19 +63,28 @@ import js.html.CanvasRenderingContext2D;
  * MouseEvent.ROLL_OUT		This event is similar to mouseout, with the following differences: it does not bubble, and it considers Container
  * 							instances as an aggregate of their content. This event must be enabled using enableMouseOver. See the MouseEvent
  * 							class for a listing of event properties.
- * 	
- * TickEvent.TICK			Dispatched on each display object on a stage whenever the stage updates. This occurs immediately before the
- * 							rendering (draw) pass. When update is called, first all display objects on the stage dispatch the tick event,
- * 							then all of the display objects are drawn to stage. Children will have their Tick:event event dispatched in
- * 							order of their depth prior to the event being dispatched on their parent.
- * 
  * 
  * Documentation: https://www.createjs.com/docs/easeljs/classes/MovieClip.html
  * @author VolkovRA
  */
 @:native("createjs.MovieClip")
 extern class MovieClip extends Container 
-{	
+{
+	/**
+	 * Create a new MovieClip.
+	 * @param	properties	The configuration properties to apply to this instance.
+	 * 						These props are set on the corresponding instance properties except where specified.
+	 * 						This object will also be passed into the Timeline instance associated with this MovieClip.
+	 * 						See the documentation for Timeline for a list of supported props (ex. paused, labels, loop, reversed, etc.)
+	 */
+	public function new(?properties:MovieClipConfig);
+	
+	
+	
+	////////////////////
+	//   PROPERTIES   //
+	////////////////////
+	
 	/**
 	 * If true, actions in this MovieClip's tweens will be run when the playhead advances.
 	 * Default: true
@@ -185,14 +199,11 @@ extern class MovieClip extends Container
 	 */
 	public var totalFrames(default, null):Float;
 	
-	/**
-	 * Create a new MovieClip.
-	 * @param	properties	The configuration properties to apply to this instance.
-	 * 						These props are set on the corresponding instance properties except where specified.
-	 * 						This object will also be passed into the Timeline instance associated with this MovieClip.
-	 * 						See the documentation for Timeline for a list of supported props (ex. paused, labels, loop, reversed, etc.)
-	 */
-	public function new(?properties:MovieClipConfig);
+	
+	
+	/////////////////
+	//   METHODS   //
+	/////////////////
 	
 	/**
 	 * Advances the playhead.
@@ -203,17 +214,17 @@ extern class MovieClip extends Container
 	
 	/**
 	 * Advances this movie clip to the specified position or label and sets paused to false.
-	 * @param	position	The animation name or frame number to go to.
+	 * @param	frame		The animation name or frame number to go to.
 	 */
-	@:overload(function(label:String):Void{})
-	public function gotoAndPlay(position:Int):Void;
+	@:overload(function(animation:String):Void{})
+	public function gotoAndPlay(frame:Int):Void;
 	
 	/**
 	 * Advances this movie clip to the specified position or label and sets paused to true.
-	 * @param	position	The animation or frame name to go to.
+	 * @param	frame		The animation or frame name to go to.
 	 */
-	@:overload(function(label:String):Void{})
-	public function gotoAndStop(position:Int):Void;
+	@:overload(function(animation:String):Void{})
+	public function gotoAndStop(frame:Int):Void;
 	
 	/**
 	 * Sets paused to false.
@@ -224,6 +235,7 @@ extern class MovieClip extends Container
 	 * Sets paused to true.
 	 */
 	public function stop():Void;
+	
 	
 	
 	////////////////////

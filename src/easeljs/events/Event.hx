@@ -342,12 +342,6 @@ extern class Event
 	 */
 	public function stopPropagation():Void;
 	
-	
-	
-	/////////////////
-	//   METHODS   //
-	/////////////////
-	
 	/**
 	 * Returns a clone of the Event instance.
 	 * @return	A clone of the object instance.

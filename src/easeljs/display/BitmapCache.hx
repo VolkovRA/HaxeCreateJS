@@ -34,6 +34,12 @@ extern class BitmapCache
 	 */
 	public function new();
 	
+	
+	
+	////////////////////
+	//   PROPERTIES   //
+	////////////////////
+	
 	/**
 	 * Track how many times the cache has been updated, mostly used for preventing duplicate cacheURLs.
 	 * This can be useful to see if a cache has been updated.
@@ -45,7 +51,7 @@ extern class BitmapCache
 	
 	/////////////////
 	//   METHODS   //
-	///////////////// 
+	/////////////////
 	
 	/**
 	 * Actually create the correct cache surface and properties associated with it. Caching and it's

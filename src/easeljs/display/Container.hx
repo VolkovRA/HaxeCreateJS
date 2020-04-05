@@ -18,6 +18,11 @@ import js.html.CanvasRenderingContext2D;
  * </code>
  * 
  * EVENTS
+ * Event.TICK				Dispatched on each display object on a stage whenever the stage updates. This occurs immediately before the
+ * 							rendering (draw) pass. When update is called, first all display objects on the stage dispatch the tick event,
+ * 							then all of the display objects are drawn to stage. Children will have their Tick:event event dispatched in
+ * 							order of their depth prior to the event being dispatched on their parent.
+ * 
  * Event.ADDED				Dispatched when the display object is added to a parent container.
  * 
  * Event.REMOVED			Dispatched when the display object is removed from its parent container.
@@ -61,17 +66,23 @@ import js.html.CanvasRenderingContext2D;
  * 							instances as an aggregate of their content. This event must be enabled using enableMouseOver. See the MouseEvent
  * 							class for a listing of event properties.
  * 	
- * TickEvent.TICK			Dispatched on each display object on a stage whenever the stage updates. This occurs immediately before the
- * 							rendering (draw) pass. When update is called, first all display objects on the stage dispatch the tick event,
- * 							then all of the display objects are drawn to stage. Children will have their Tick:event event dispatched in
- * 							order of their depth prior to the event being dispatched on their parent.
- * 
  * Documentation: https://www.createjs.com/docs/easeljs/classes/Container.html
  * @author VolkovRA
  */
 @:native("createjs.Container")
 extern class Container extends DisplayObject 
 {
+	/**
+	 * Create a new Container.
+	 */
+	public function new();
+	
+	
+	
+	////////////////////
+	//   PROPERTIES   //
+	////////////////////
+	
 	/**
 	 * The array of children in the display list.
 	 * You should usually use the child management methods such as addChild, removeChild, swapChildren,
@@ -95,15 +106,16 @@ extern class Container extends DisplayObject
 	
 	/**
 	 * If false, the tick will not be propagated to children of this Container.
-	 * This can provide some performance benefits. In addition to preventing the TickEvent.TICK event from being dispatched, it will also prevent tick related updates on some display objects (ex. Sprite & MovieClip frame advancing, DOMElement visibility handling).
+	 * This can provide some performance benefits. In addition to preventing the Event.TICK event from being dispatched, it will also prevent tick related updates on some display objects (ex. Sprite & MovieClip frame advancing, DOMElement visibility handling).
 	 * Default: true
 	 */
 	public var tickChildren:Bool;
 	
-	/**
-	 * Create a new Container.
-	 */
-	public function new();
+	
+	
+	/////////////////
+	//   METHODS   //
+	/////////////////
 	
 	/**
 	 * Adds a child to the top of the display list.

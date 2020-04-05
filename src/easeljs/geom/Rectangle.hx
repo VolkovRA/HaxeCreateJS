@@ -9,6 +9,21 @@ package easeljs.geom;
 extern class Rectangle 
 {
 	/**
+	 * Create a new Rectangle.
+	 * @param	x		X position.
+	 * @param	y		Y position.
+	 * @param	width	The width of the Rectangle.
+	 * @param	height	The height of the Rectangle.
+	 */
+	public function new(x:Float = 0, y:Float = 0, width:Float = 0, height:Float = 0);
+	
+	
+	
+	////////////////////
+	//   PROPERTIES   //
+	////////////////////
+	
+	/**
 	 * X position.
 	 * Default: 0
 	 */
@@ -32,14 +47,11 @@ extern class Rectangle
 	 */
 	public var height:Float;
 	
-	/**
-	 * Create a new Rectangle.
-	 * @param	x		X position.
-	 * @param	y		Y position.
-	 * @param	width	The width of the Rectangle.
-	 * @param	height	The height of the Rectangle.
-	 */
-	public function new(x:Float = 0, y:Float = 0, width:Float = 0, height:Float = 0);
+	
+	
+	/////////////////
+	//   METHODS   //
+	/////////////////
 	
 	/**
 	 * Returns a clone of the Rectangle instance.

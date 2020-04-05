@@ -25,6 +25,17 @@ import js.html.webgl.Shader;
 extern class Filter
 {
 	/**
+	 * Create a new Filter.
+	 */
+	public function new();
+	
+	
+	
+	////////////////////
+	//   PROPERTIES   //
+	////////////////////
+	
+	/**
 	 * Pre-processed template shader code.
 	 * It will be parsed before being fed in into the shader compiler.
 	 * This should be based upon StageGL.SHADER_FRAGMENT_BODY_REGULAR
@@ -44,10 +55,11 @@ extern class Filter
 	 */
 	public var usesContext:Bool;
 	
-	/**
-	 * Create a new Filter.
-	 */
-	public function new();
+	
+	
+	/////////////////
+	//   METHODS   //
+	/////////////////
 	
 	/**
 	 * Applies the filter to the specified context.

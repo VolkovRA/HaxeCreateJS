@@ -16,16 +16,15 @@ import js.html.ImageElement;
 extern class AlphaMapFilter extends Filter
 {
 	/**
-	 * The greyscale image (or canvas) to use as the alpha value for the result.
-	 * This should be exactly the same dimensions as the target.
-	 */
-	public var alphaMap:EitherType<ImageElement, CanvasElement>;
-	
-	/**
 	 * Create a new AlphaMapFilter.
 	 * @param	alphaMap	The greyscale image (or canvas) to use as the alpha value for the result.
 	 * 						This should be exactly the same dimensions as the target.
 	 */
 	public function new(alphaMap:EitherType<ImageElement, CanvasElement>);
+	
+	/**
+	 * The greyscale image (or canvas) to use as the alpha value for the result.
+	 * This should be exactly the same dimensions as the target.
+	 */
+	public var alphaMap:EitherType<ImageElement, CanvasElement>;
 }
-

@@ -11,6 +11,27 @@ import easeljs.geom.Matrix2D;
 extern class DisplayProps 
 {
 	/**
+	 * Create a new DisplayProps.
+	 * @param	visible		Visible value.
+	 * @param	alpha		Alpha value.
+	 * @param	shadow		A Shadow instance or null.
+	 * @param	composite	A compositeOperation value or null.
+	 * @param	matrix		A transformation matrix. Defaults to a new identity matrix.
+	 */
+	public function new(	visible:Bool = true,
+							alpha:Float = 1,
+							shadow:Shadow = null,
+							composite:CompositeOperation = null,
+							matrix:Matrix2D = null
+	);
+	
+	
+	
+	////////////////////
+	//   PROPERTIES   //
+	////////////////////
+	
+	/**
 	 * Property representing the alpha that will be applied to a display object.
 	 */
 	public var alpha:Float;
@@ -35,20 +56,11 @@ extern class DisplayProps
 	 */
 	public var visible:Bool;
 	
-	/**
-	 * Create a new DisplayProps.
-	 * @param	visible		Visible value.
-	 * @param	alpha		Alpha value.
-	 * @param	shadow		A Shadow instance or null.
-	 * @param	composite	A compositeOperation value or null.
-	 * @param	matrix		A transformation matrix. Defaults to a new identity matrix.
-	 */
-	public function new(	visible:Bool = true,
-							alpha:Float = 1,
-							shadow:Shadow = null,
-							composite:CompositeOperation = null,
-							matrix:Matrix2D = null
-	);
+	
+	
+	/////////////////
+	//   METHODS   //
+	/////////////////
 	
 	/**
 	 * Appends the specified display properties.

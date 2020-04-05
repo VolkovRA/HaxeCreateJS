@@ -21,6 +21,33 @@ package easeljs.filters;
 extern class ColorFilter extends Filter 
 {
 	/**
+	 * Create a new ColorFilter.
+	 * @param	redMultiplier	The amount to multiply against the red channel. This is a range between 0 and 1.
+	 * @param	greenMultiplier	The amount to multiply against the green channel. This is a range between 0 and 1.
+	 * @param	blueMultiplier	The amount to multiply against the blue channel. This is a range between 0 and 1.
+	 * @param	alphaMultiplier	The amount to multiply against the alpha channel. This is a range between 0 and 1.
+	 * @param	redOffset		The amount to add to the red channel after it has been multiplied. This is a range between -255 and 255.
+	 * @param	greenOffset		The amount to add to the green channel after it has been multiplied. This is a range between -255 and 255.
+	 * @param	blueOffset		The amount to add to the blue channel after it has been multiplied. This is a range between -255 and 255.
+	 * @param	alphaOffset		The amount to add to the alpha channel after it has been multiplied. This is a range between -255 and 255.
+	 */
+	public function new(	redMultiplier:Float = 1,
+							greenMultiplier:Float = 1, 
+							blueMultiplier:Float = 1,
+							alphaMultiplier:Float = 1,
+							redOffset:Float = 0,
+							greenOffset:Float = 0,
+							blueOffset:Float = 0,
+							alphaOffset:Float = 0
+	);
+	
+	
+	
+	////////////////////
+	//   PROPERTIES   //
+	////////////////////
+	
+	/**
 	 * The amount to multiply against the alpha channel.
 	 * This is a range between 0 and 1.
 	 */
@@ -67,25 +94,4 @@ extern class ColorFilter extends Filter
 	 * This is a range between -255 and 255.
 	 */
 	public var redOffset:Float;
-	
-	/**
-	 * Create a new ColorFilter.
-	 * @param	redMultiplier	The amount to multiply against the red channel. This is a range between 0 and 1.
-	 * @param	greenMultiplier	The amount to multiply against the green channel. This is a range between 0 and 1.
-	 * @param	blueMultiplier	The amount to multiply against the blue channel. This is a range between 0 and 1.
-	 * @param	alphaMultiplier	The amount to multiply against the alpha channel. This is a range between 0 and 1.
-	 * @param	redOffset		The amount to add to the red channel after it has been multiplied. This is a range between -255 and 255.
-	 * @param	greenOffset		The amount to add to the green channel after it has been multiplied. This is a range between -255 and 255.
-	 * @param	blueOffset		The amount to add to the blue channel after it has been multiplied. This is a range between -255 and 255.
-	 * @param	alphaOffset		The amount to add to the alpha channel after it has been multiplied. This is a range between -255 and 255.
-	 */
-	public function new(	redMultiplier:Float = 1,
-							greenMultiplier:Float = 1, 
-							blueMultiplier:Float = 1,
-							alphaMultiplier:Float = 1,
-							redOffset:Float = 0,
-							greenOffset:Float = 0,
-							blueOffset:Float = 0,
-							alphaOffset:Float = 0
-	);
 }

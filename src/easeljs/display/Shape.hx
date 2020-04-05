@@ -20,6 +20,11 @@ import js.html.CanvasRenderingContext2D;
  * </code>
  * 
  * EVENTS
+ * Event.TICK				Dispatched on each display object on a stage whenever the stage updates. This occurs immediately before the
+ * 							rendering (draw) pass. When update is called, first all display objects on the stage dispatch the tick event,
+ * 							then all of the display objects are drawn to stage. Children will have their Tick:event event dispatched in
+ * 							order of their depth prior to the event being dispatched on their parent.
+ * 
  * Event.ADDED				Dispatched when the display object is added to a parent container.
  * 
  * Event.REMOVED			Dispatched when the display object is removed from its parent container.
@@ -62,11 +67,6 @@ import js.html.CanvasRenderingContext2D;
  * MouseEvent.ROLL_OUT		This event is similar to mouseout, with the following differences: it does not bubble, and it considers Container
  * 							instances as an aggregate of their content. This event must be enabled using enableMouseOver. See the MouseEvent
  * 							class for a listing of event properties.
- * 	
- * TickEvent.TICK			Dispatched on each display object on a stage whenever the stage updates. This occurs immediately before the
- * 							rendering (draw) pass. When update is called, first all display objects on the stage dispatch the tick event,
- * 							then all of the display objects are drawn to stage. Children will have their Tick:event event dispatched in
- * 							order of their depth prior to the event being dispatched on their parent.
  * 
  * Documentation: https://www.createjs.com/docs/easeljs/classes/Shape.html
  * @author VolkovRA
@@ -75,15 +75,27 @@ import js.html.CanvasRenderingContext2D;
 extern class Shape extends DisplayObject 
 {
 	/**
-	 * The graphics instance to display.
-	 */
-	public var graphics:Graphics;
-	
-	/**
 	 * Create a new Shape.
 	 * @param	graphics The graphics instance to display. If null, a new Graphics instance will be created.
 	 */
 	public function new(?graphics:Graphics);
+	
+	
+	
+	////////////////////
+	//   PROPERTIES   //
+	////////////////////
+	
+	/**
+	 * The graphics instance to display.
+	 */
+	public var graphics:Graphics;
+	
+	
+	
+	//////////////////
+	//   OVERRIDE   //
+	//////////////////
 	
 	/**
 	 * Draws the Shape into the specified context ignoring its visible, alpha, shadow, and transform.

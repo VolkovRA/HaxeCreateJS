@@ -1,5 +1,10 @@
 package easeljs;
 
+import easeljs.events.Event;
+import easeljs.events.EventObject;
+import easeljs.events.Listener;
+import easeljs.events.ListenerCallback;
+
 /**
  * The Ticker provides a centralized tick or heartbeat broadcast at a set interval.
  * Listeners can subscribe to the tick event to be notified when a set time interval has elapsed.
@@ -9,7 +14,7 @@ package easeljs;
  * (ex. Ticker.framerate = 30;) and can not be instantiated.
  * 
  * EVENTS
- * TickEvent.TICK		Dispatched each tick. 
+ * Event.TICK			Dispatched each tick. 
  * 						The event will be dispatched to each listener even when the Ticker has been paused using paused.
  * 
  * Documentation: https://www.createjs.com/docs/easeljs/classes/Ticker.html
@@ -18,6 +23,10 @@ package easeljs;
 @:native("createjs.Ticker")
 extern class Ticker 
 {
+	////////////////////
+	//   PROPERTIES   //
+	////////////////////
+	
 	/**
 	 * Indicates the target frame rate in frames per second (FPS).
 	 * Effectively just a shortcut to interval, where framerate == 1000/interval.
@@ -58,6 +67,12 @@ extern class Ticker
 	 * Default: TimingMode.TIMEOUT
 	 */
 	static public var timingMode:TimingMode;
+	
+	
+	
+	/////////////////
+	//   METHODS   //
+	/////////////////
 	
 	/**
 	 * Similar to the getTime method, but returns the time on the most recent tick event object.
@@ -219,12 +234,14 @@ extern class Ticker
 	 * Use the framerate property instead.
 	 */
 	@:deprecated
+	@:noCompletion
 	static public function getFPS():Float;
 	
 	/**
 	 * Use the interval property instead.
 	 */
 	@:deprecated
+	@:noCompletion
 	static public function getInterval():Float;
 	
 	/**
@@ -232,6 +249,7 @@ extern class Ticker
 	 * @param	value Frames per second. (FPS)
 	 */
 	@:deprecated
+	@:noCompletion
 	static public function setFPS(value:Float):Void;
 	
 	/**
@@ -239,5 +257,6 @@ extern class Ticker
 	 * @param	value Indicates the target time (in milliseconds) between ticks.
 	 */
 	@:deprecated
+	@:noCompletion
 	static public function setInterval(value:Float):Void;
 }

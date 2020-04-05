@@ -13,14 +13,14 @@ import haxe.extern.EitherType;
 extern class ColorMatrixFilter extends Filter 
 {
 	/**
-	 * A 4x5 matrix describing the color operation to perform.
-	 * See also the ColorMatrix.
-	 */
-	public var matrix:EitherType<ColorMatrix, Array<Float>>;
-	
-	/**
 	 * Create a new ColorMatrixFilter.
 	 * @param	matrix A 4x5 matrix describing the color operation to perform. See also the ColorMatrix.
 	 */
 	public function new(matrix:ColorMatrix);
+	
+	/**
+	 * A 4x5 matrix describing the color operation to perform.
+	 * See also the ColorMatrix.
+	 */
+	public var matrix:EitherType<ColorMatrix, Array<Float>>;
 }

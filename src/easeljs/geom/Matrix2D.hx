@@ -14,6 +14,23 @@ package easeljs.geom;
 extern class Matrix2D 
 {
 	/**
+	 * Create a new DisplayObject.
+	 * @param	a	Specifies the a property for the new matrix.
+	 * @param	b	Specifies the b property for the new matrix.
+	 * @param	c	Specifies the c property for the new matrix.
+	 * @param	d	Specifies the d property for the new matrix.
+	 * @param	tx	Specifies the tx property for the new matrix.
+	 * @param	ty	Specifies the ty property for the new matrix.
+	 */
+	public function new(a:Float = 1, b:Float = 0, c:Float = 0, d:Float = 1, tx:Float = 0, ty:Float = 0);
+	
+	
+	
+	////////////////
+	//   STATIC   //
+	////////////////
+	
+	/**
 	 * Multiplier for converting degrees to radians. (Math.PI/180)
 	 * Used internally by Matrix2D.
 	 */
@@ -23,6 +40,12 @@ extern class Matrix2D
 	 * An identity matrix, representing a null transformation.
 	 */
 	static public var identity(default, null):Matrix2D;
+	
+	
+	
+	////////////////////
+	//   PROPERTIES   //
+	////////////////////
 	
 	/**
 	 * Position (0, 0) in a 3x3 affine transformation matrix.
@@ -54,16 +77,11 @@ extern class Matrix2D
 	 */
 	public var ty:Float;
 	
-	/**
-	 * Create a new DisplayObject.
-	 * @param	a	Specifies the a property for the new matrix.
-	 * @param	b	Specifies the b property for the new matrix.
-	 * @param	c	Specifies the c property for the new matrix.
-	 * @param	d	Specifies the d property for the new matrix.
-	 * @param	tx	Specifies the tx property for the new matrix.
-	 * @param	ty	Specifies the ty property for the new matrix.
-	 */
-	public function new(a:Float = 1, b:Float = 0, c:Float = 0, d:Float = 1, tx:Float = 0, ty:Float = 0);
+	
+	
+	/////////////////
+	//   METHODS   //
+	/////////////////
 	
 	/**
 	 * Appends the specified matrix properties to this matrix.

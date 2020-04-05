@@ -1,6 +1,7 @@
 package easeljs.display;
 
 import easeljs.geom.Rectangle;
+import easeljs.sheet.SpriteSheet;
 import js.html.CanvasRenderingContext2D;
 
 /**
@@ -17,7 +18,12 @@ import js.html.CanvasRenderingContext2D;
  * Until gotoAndStop or gotoAndPlay is called, only the first defined frame defined in the sprite sheet will be displayed.
  * 
  * EVENTS
- * AnimationEvent.ANIMATION_END	Dispatched when an animation reaches its ends.
+ * Event.TICK					Dispatched on each display object on a stage whenever the stage updates. This occurs immediately before the
+ * 								rendering (draw) pass. When update is called, first all display objects on the stage dispatch the tick event,
+ * 								then all of the display objects are drawn to stage. Children will have their Tick:event event dispatched in
+ * 								order of their depth prior to the event being dispatched on their parent.
+ * 
+ * Event.ANIMATION_END			Dispatched when an animation reaches its ends.
  * 
  * Event.ADDED					Dispatched when the display object is added to a parent container.
  * 
@@ -64,11 +70,6 @@ import js.html.CanvasRenderingContext2D;
  * MouseEvent.ROLL_OUT			This event is similar to mouseout, with the following differences: it does not bubble, and it considers Container
  * 								instances as an aggregate of their content. This event must be enabled using enableMouseOver. See the MouseEvent
  * 								class for a listing of event properties.
- * 	
- * TickEvent.TICK				Dispatched on each display object on a stage whenever the stage updates. This occurs immediately before the
- * 								rendering (draw) pass. When update is called, first all display objects on the stage dispatch the tick event,
- * 								then all of the display objects are drawn to stage. Children will have their Tick:event event dispatched in
- * 								order of their depth prior to the event being dispatched on their parent.
  * 
  * Documentation: https://www.createjs.com/docs/easeljs/classes/Sprite.html
  * @author VolkovRA
@@ -76,6 +77,21 @@ import js.html.CanvasRenderingContext2D;
 @:native("createjs.Sprite")
 extern class Sprite extends DisplayObject 
 {
+	/**
+	 * Create a new Sprite.
+	 * @param	spriteSheet			The SpriteSheet instance to play back. This includes the source image(s), frame dimensions, and frame data.
+	 * @param	frameOrAnimation	The frame number or animation to play initially.
+	 */
+	@:overload(function(spriteSheet:SpriteSheet){})
+	@:overload(function(spriteSheet:SpriteSheet, frameOrAnimation:String){})
+	public function new(spriteSheet:SpriteSheet, frameOrAnimation:Int);
+	
+	
+	
+	////////////////////
+	//   PROPERTIES   //
+	////////////////////
+	
 	/**
 	 * Returns the name of the currently playing animation.
 	 */
@@ -130,14 +146,11 @@ extern class Sprite extends DisplayObject
 	 */
 	public var spriteSheet(default, null):SpriteSheet;
 	
-	/**
-	 * Create a new Sprite.
-	 * @param	spriteSheet			The SpriteSheet instance to play back. This includes the source image(s), frame dimensions, and frame data.
-	 * @param	frameOrAnimation	The frame number or animation to play initially.
-	 */
-	@:overload(function(spriteSheet:SpriteSheet){})
-	@:overload(function(spriteSheet:SpriteSheet, frameOrAnimation:String){})
-	public function new(spriteSheet:SpriteSheet, frameOrAnimation:Int);
+	
+	
+	/////////////////
+	//   METHODS   //
+	/////////////////
 	
 	/**
 	 * Advances the playhead.
@@ -150,14 +163,14 @@ extern class Sprite extends DisplayObject
 	 * Sets paused to false and plays the specified animation name, named frame, or frame number.
 	 * @param	frame	The frame number or animation name that the playhead should move to and begin playing.
 	 */
-	@:overload(function(frame:String):Void{})
+	@:overload(function(animation:String):Void{})
 	public function gotoAndPlay(frame:Int):Void;
 	
 	/**
 	 * Sets paused to true and seeks to the specified animation name, named frame, or frame number.
 	 * @param	frame	The frame number or animation name that the playhead should move to and stop.
 	 */
-	@:overload(function(frame:String):Void{})
+	@:overload(function(animation:String):Void{})
 	public function gotoAndStop(frame:Int):Void;
 	
 	/**

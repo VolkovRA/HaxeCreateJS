@@ -7,9 +7,9 @@ package easeljs.ui;
  */
 @:enum abstract MouseCursor(String) to String
 {
-	/////////////
-	// GENERAL //
-	/////////////
+	/////////////////
+	//   GENERAL   //
+	/////////////////
 	
 	/**
 	 * The UA will determine the cursor to display based on the current context. E.g., equivalent to text when hovering text.
@@ -28,9 +28,9 @@ package easeljs.ui;
 	
 	
 	
-	////////////////////
-	// Links & status //
-	////////////////////
+	////////////////////////
+	//   LINKS & STATUS   //
+	////////////////////////
 	
 	/**
 	 * 	A context menu is available.
@@ -61,9 +61,9 @@ package easeljs.ui;
 	
 	
 	
-	///////////////
-	// Selection //
-	///////////////
+	///////////////////
+	//   SELECTION   //
+	///////////////////
 	
 	/**
 	 * The table cell or set of cells can be selected.
@@ -89,9 +89,9 @@ package easeljs.ui;
 	
 	
 	
-	/////////////////
-	// Drag & drop //
-	/////////////////
+	/////////////////////
+	//   DRAG & DROP   //
+	/////////////////////
 	
 	/**
 	 * An alias or shortcut is to be created.
@@ -131,9 +131,9 @@ package easeljs.ui;
 	
 	
 	
-	//////////////////////////
-	// Resizing & scrolling //
-	//////////////////////////
+	//////////////////////////////
+	//   RESIZING & SCROLLING   //
+	//////////////////////////////
 	
 	/**
 	 * Something can be scrolled in any direction (panned).
@@ -215,9 +215,9 @@ package easeljs.ui;
 	
 	
 	
-	/////////////
-	// Zooming //
-	/////////////
+	/////////////////
+	//   ZOOMING   //
+	/////////////////
 	
 	/**
 	 * 	Zoom in: +

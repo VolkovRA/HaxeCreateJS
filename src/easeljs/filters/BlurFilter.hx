@@ -11,6 +11,14 @@ package easeljs.filters;
 extern class BlurFilter extends Filter 
 {
 	/**
+	 * Create a new BlurFilter.
+	 * @param	blurX	The horizontal blur radius in pixels.
+	 * @param	blurY	The vertical blur radius in pixels.
+	 * @param	quality	The number of blur iterations.
+	 */
+	public function new(blurX:Float = 0, blurY:Float = 0, quality:Float = 1);
+	
+	/**
 	 * The horizontal blur radius in pixels.
 	 * Default: 0
 	 */
@@ -27,12 +35,4 @@ extern class BlurFilter extends Filter
 	 * Default: 1
 	 */
 	public var quality:Float;
-	
-	/**
-	 * Create a new BlurFilter.
-	 * @param	blurX	The horizontal blur radius in pixels.
-	 * @param	blurY	The vertical blur radius in pixels.
-	 * @param	quality	The number of blur iterations.
-	 */
-	public function new(blurX:Float = 0, blurY:Float = 0, quality:Float = 1);
 }
