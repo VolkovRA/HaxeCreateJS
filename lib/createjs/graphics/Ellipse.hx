@@ -13,6 +13,15 @@ import js.html.CanvasRenderingContext2D;
 extern class Ellipse implements ICommand 
 {
 	/**
+	 * Create a new Ellipse command.
+	 * @param	x The left coordinate point of the ellipse. Note that this is different from drawCircle which draws from center.
+	 * @param	y The top coordinate point of the ellipse. Note that this is different from drawCircle which draws from the center.
+	 * @param	w The height (horizontal diameter) of the ellipse. The horizontal radius will be half of this number.
+	 * @param	h The width (vertical diameter) of the ellipse. The vertical radius will be half of this number.
+	 */
+	public function new(x:Float, y:Float, w:Float, h:Float);
+	
+	/**
 	 * The left coordinate point of the ellipse.
 	 * Note that this is different from drawCircle which draws from center.
 	 */
@@ -35,15 +44,6 @@ extern class Ellipse implements ICommand
 	 * The vertical radius will be half of this number.
 	 */
 	public var h:Float;
-	
-	/**
-	 * Create a new Ellipse command.
-	 * @param	x The left coordinate point of the ellipse. Note that this is different from drawCircle which draws from center.
-	 * @param	y The top coordinate point of the ellipse. Note that this is different from drawCircle which draws from the center.
-	 * @param	w The height (horizontal diameter) of the ellipse. The horizontal radius will be half of this number.
-	 * @param	h The width (vertical diameter) of the ellipse. The vertical radius will be half of this number.
-	 */
-	public function new(x:Float, y:Float, w:Float, h:Float);
 	
 	/**
 	 * Execute the Graphics command in the provided Canvas context.

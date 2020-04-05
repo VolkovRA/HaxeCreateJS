@@ -19,6 +19,17 @@ import js.html.CanvasRenderingContext2D;
 extern class BezierCurveTo implements ICommand 
 {
 	/**
+	 * Create a new BezierCurveTo command.
+	 * @param	cp1x	The x-coordinate of the first Bézier control point.
+	 * @param	cp1y	The y-coordinate of the first Bézier control point.
+	 * @param	cp2x	The x-coordinate of the second Bézier control point.
+	 * @param	cp2y	The y-coordinate of the second Bézier control point.
+	 * @param	x		The x-coordinate of the ending point.
+	 * @param	y		The y-coordinate of the ending point.
+	 */
+	public function new(cp1x:Float, cp1y:Float, cp2x:Float, cp2y:Float, x:Float, y:Float);
+	
+	/**
 	 * The x-coordinate of the first Bézier control point.
 	 */
 	public var cp1x:Float;
@@ -47,17 +58,6 @@ extern class BezierCurveTo implements ICommand
 	 * The y-coordinate of the ending point.
 	 */
 	public var y:Float;
-	
-	/**
-	 * Create a new BezierCurveTo command.
-	 * @param	cp1x	The x-coordinate of the first Bézier control point.
-	 * @param	cp1y	The y-coordinate of the first Bézier control point.
-	 * @param	cp2x	The x-coordinate of the second Bézier control point.
-	 * @param	cp2y	The y-coordinate of the second Bézier control point.
-	 * @param	x		The x-coordinate of the ending point.
-	 * @param	y		The y-coordinate of the ending point.
-	 */
-	public function new(cp1x:Float, cp1y:Float, cp2x:Float, cp2y:Float, x:Float, y:Float);
 	
 	/**
 	 * Execute the Graphics command in the provided Canvas context.

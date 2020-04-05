@@ -12,6 +12,14 @@ import js.html.CanvasRenderingContext2D;
 extern class Circle implements ICommand 
 {
 	/**
+	 * Create a new Circle command.
+	 * @param	x		X Coordinate center point of circle.
+	 * @param	y		Y Coordinate center point of circle.
+	 * @param	radius	Radius of circle.
+	 */
+	public function new(x:Float, y:Float, radius:Float);
+	
+	/**
 	 * X Coordinate center point of circle.
 	 */
 	public var x:Float;
@@ -25,14 +33,6 @@ extern class Circle implements ICommand
 	 * Radius of circle.
 	 */
 	public var radius:Float;
-	
-	/**
-	 * Create a new Circle command.
-	 * @param	x		X Coordinate center point of circle.
-	 * @param	y		Y Coordinate center point of circle.
-	 * @param	radius	Radius of circle.
-	 */
-	public function new(x:Float, y:Float, radius:Float);
 	
 	/**
 	 * Execute the Graphics command in the provided Canvas context.

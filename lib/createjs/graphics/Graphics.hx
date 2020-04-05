@@ -27,6 +27,13 @@ import js.html.VideoElement;
 @:native("createjs.Graphics")
 extern class Graphics 
 {
+	/**
+	 * Create a new Graphics.
+	 */
+	public function new();
+	
+	
+	
 	////////////////
 	//   STATIC   //
 	////////////////
@@ -130,11 +137,6 @@ extern class Graphics
 	/////////////////
 	//   METHODS   //
 	/////////////////
-	
-	/**
-	 * Create a new Graphics.
-	 */
-	public function new();
 	
 	/**
 	 * Appends a graphics command object to the graphics queue.

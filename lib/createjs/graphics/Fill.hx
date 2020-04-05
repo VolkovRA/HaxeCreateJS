@@ -22,6 +22,13 @@ import js.html.VideoElement;
 extern class Fill implements ICommand 
 {
 	/**
+	 * Create a new Fill command.
+	 * @param	style	A valid Context2D fillStyle.
+	 * @param	matrix	Transform matrix.
+	 */
+	public function new(style:FillStyle, matrix:Matrix2D);
+	
+	/**
 	 * A valid Context2D fillStyle.
 	 * Default: "#000"
 	 */
@@ -31,13 +38,6 @@ extern class Fill implements ICommand
 	 * Transform matrix.
 	 */
 	public var matrix:Matrix2D;
-	
-	/**
-	 * Create a new Fill command.
-	 * @param	style	A valid Context2D fillStyle.
-	 * @param	matrix	Transform matrix.
-	 */
-	public function new(style:FillStyle, matrix:Matrix2D);
 	
 	/**
 	 * Execute the Graphics command in the provided Canvas context.

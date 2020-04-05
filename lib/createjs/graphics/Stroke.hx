@@ -17,6 +17,13 @@ import js.html.VideoElement;
 extern class Stroke implements ICommand 
 {
 	/**
+	 * Create a new Stroke command.
+	 * @param	style		A valid Context2D fillStyle.
+	 * @param	ignoreScale	If true, the stroke will be drawn at the specified thickness regardless of active transformations.
+	 */
+	public function new(style:FillStyle, ignoreScale:Bool);
+	
+	/**
 	 * A valid Context2D fillStyle.
 	 * Default: "#000"
 	 */
@@ -26,13 +33,6 @@ extern class Stroke implements ICommand
 	 * If true, the stroke will be drawn at the specified thickness regardless of active transformations.
 	 */
 	public var ignoreScale:Bool;
-	
-	/**
-	 * Create a new Stroke command.
-	 * @param	style		A valid Context2D fillStyle.
-	 * @param	ignoreScale	If true, the stroke will be drawn at the specified thickness regardless of active transformations.
-	 */
-	public function new(style:FillStyle, ignoreScale:Bool);
 	
 	/**
 	 * Execute the Graphics command in the provided Canvas context.

@@ -16,6 +16,13 @@ import js.html.CanvasRenderingContext2D;
 extern class LineTo implements ICommand 
 {
 	/**
+	 * Create a new LineTo command.
+	 * @param	x The x coordinate the drawing point should draw to.
+	 * @param	y The y coordinate the drawing point should draw to.
+	 */
+	public function new(x:Float, y:Float);
+	
+	/**
 	 * The x coordinate the drawing point should draw to.
 	 */
 	public var x:Float;
@@ -24,13 +31,6 @@ extern class LineTo implements ICommand
 	 * The y coordinate the drawing point should draw to.
 	 */
 	public var y:Float;
-	
-	/**
-	 * Create a new LineTo command.
-	 * @param	x The x coordinate the drawing point should draw to.
-	 * @param	y The y coordinate the drawing point should draw to.
-	 */
-	public function new(x:Float, y:Float);
 	
 	/**
 	 * Execute the Graphics command in the provided Canvas context.

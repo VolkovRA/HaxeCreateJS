@@ -13,6 +13,19 @@ import js.html.CanvasRenderingContext2D;
 extern class RoundRect implements ICommand 
 {
 	/**
+	 * Create a new RoundRect command.
+	 * @param	x			The x-coordinate of the upper-left corner of the rectangle.
+	 * @param	y			The y-coordinate of the upper-left corner of the rectangle.
+	 * @param	w			The width of the rectangle, in pixels.
+	 * @param	h			The height of the rectangle, in pixels.
+	 * @param	radiusTL	Top left corner radius.
+	 * @param	radiusTR	Top right corner radius.
+	 * @param	radiusBR	Bottom right corner radius.
+	 * @param	radiusBL	Bottom left corner radius.
+	 */
+	public function new(x:Float, y:Float, w:Float, h:Float, radiusTL:Float, radiusTR:Float, radiusBR:Float, radiusBL:Float);
+	
+	/**
 	 * The x-coordinate of the upper-left corner of the rectangle.
 	 */
 	public var x:Float;
@@ -51,19 +64,6 @@ extern class RoundRect implements ICommand
 	 * Bottom left corner radius.
 	 */
 	public var radiusBL:Float;
-	
-	/**
-	 * Create a new RoundRect command.
-	 * @param	x			The x-coordinate of the upper-left corner of the rectangle.
-	 * @param	y			The y-coordinate of the upper-left corner of the rectangle.
-	 * @param	w			The width of the rectangle, in pixels.
-	 * @param	h			The height of the rectangle, in pixels.
-	 * @param	radiusTL	Top left corner radius.
-	 * @param	radiusTR	Top right corner radius.
-	 * @param	radiusBR	Bottom right corner radius.
-	 * @param	radiusBL	Bottom left corner radius.
-	 */
-	public function new(x:Float, y:Float, w:Float, h:Float, radiusTL:Float, radiusTR:Float, radiusBR:Float, radiusBL:Float);
 	
 	/**
 	 * Execute the Graphics command in the provided Canvas context.

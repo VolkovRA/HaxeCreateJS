@@ -18,6 +18,18 @@ import js.html.CanvasRenderingContext2D;
 extern class Arc implements ICommand 
 {
 	/**
+	 * Create a new Arc command.
+	 * @param	x				The x-coordinate of the center of the circle.
+	 * @param	y				The y-coordinate of the center of the circle.
+	 * @param	radius			The radius of the circle.
+	 * @param	startAngle		The starting angle, in radians (0 is at the 3 o'clock position of the arc's circle).
+	 * @param	endAngle		The ending angle, in radians.
+	 * @param	anticlockwise	Specifies whether the drawing should be counterclockwise or clockwise.
+	 * 							False is default, and indicates clockwise, while true indicates counter-clockwise.
+	 */
+	public function new(x:Float, y:Float, radius:Float, startAngle:Float, endAngle:Float, anticlockwise:Bool = false);
+	
+	/**
 	 * The x-coordinate of the center of the circle.
 	 */
 	public var x:Float;
@@ -47,18 +59,6 @@ extern class Arc implements ICommand
 	 * False is default, and indicates clockwise, while true indicates counter-clockwise.
 	 */
 	public var anticlockwise:Bool;
-	
-	/**
-	 * Create a new Arc command.
-	 * @param	x				The x-coordinate of the center of the circle.
-	 * @param	y				The y-coordinate of the center of the circle.
-	 * @param	radius			The radius of the circle.
-	 * @param	startAngle		The starting angle, in radians (0 is at the 3 o'clock position of the arc's circle).
-	 * @param	endAngle		The ending angle, in radians.
-	 * @param	anticlockwise	Specifies whether the drawing should be counterclockwise or clockwise.
-	 * 							False is default, and indicates clockwise, while true indicates counter-clockwise.
-	 */
-	public function new(x:Float, y:Float, radius:Float, startAngle:Float, endAngle:Float, anticlockwise:Bool = false);
 	
 	/**
 	 * Execute the Graphics command in the provided Canvas context.

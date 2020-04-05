@@ -16,6 +16,13 @@ import js.html.CanvasRenderingContext2D;
 extern class MoveTo implements ICommand 
 {
 	/**
+	 * Create a new MoveTo command.
+	 * @param	x The x-coordinate of where to move the path to.
+	 * @param	y The y-coordinate of where to move the path to.
+	 */
+	public function new(x:Float, y:Float);
+	
+	/**
 	 * The x-coordinate of where to move the path to.
 	 */
 	public var x:Float;
@@ -24,13 +31,6 @@ extern class MoveTo implements ICommand
 	 * The y-coordinate of where to move the path to.
 	 */
 	public var y:Float;
-	
-	/**
-	 * Create a new MoveTo command.
-	 * @param	x The x-coordinate of where to move the path to.
-	 * @param	y The y-coordinate of where to move the path to.
-	 */
-	public function new(x:Float, y:Float);
 	
 	/**
 	 * Execute the Graphics command in the provided Canvas context.

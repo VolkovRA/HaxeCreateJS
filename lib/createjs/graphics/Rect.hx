@@ -14,6 +14,15 @@ import js.html.CanvasRenderingContext2D;
 extern class Rect implements ICommand 
 {
 	/**
+	 * Create a new Rect command.
+	 * @param	x The x-coordinate of the upper-left corner of the rectangle.
+	 * @param	y The y-coordinate of the upper-left corner of the rectangle.
+	 * @param	w The width of the rectangle, in pixels.
+	 * @param	h The height of the rectangle, in pixels.
+	 */
+	public function new(x:Float, y:Float, w:Float, h:Float);
+	
+	/**
 	 * The x-coordinate of the upper-left corner of the rectangle.
 	 */
 	public var x:Float;
@@ -32,15 +41,6 @@ extern class Rect implements ICommand
 	 * The height of the rectangle, in pixels.
 	 */
 	public var h:Float;
-	
-	/**
-	 * Create a new Rect command.
-	 * @param	x The x-coordinate of the upper-left corner of the rectangle.
-	 * @param	y The y-coordinate of the upper-left corner of the rectangle.
-	 * @param	w The width of the rectangle, in pixels.
-	 * @param	h The height of the rectangle, in pixels.
-	 */
-	public function new(x:Float, y:Float, w:Float, h:Float);
 	
 	/**
 	 * Execute the Graphics command in the provided Canvas context.

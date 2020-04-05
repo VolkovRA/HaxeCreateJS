@@ -14,6 +14,16 @@ import js.html.CanvasRenderingContext2D;
 extern class ArcTo implements ICommand 
 {
 	/**
+	 * Create a new ArcTo command.
+	 * @param	x1		The x-coordinate of the first tangent.
+	 * @param	y1		The y-coordinate of the first tangent.
+	 * @param	x2		The x-coordinate of the second tangent.
+	 * @param	y2		The y-coordinate of the second tangent.
+	 * @param	radius	The radius of the arc.
+	 */
+	public function new(x1:Float, y1:Float, x2:Float, y2:Float, radius:Float);
+	
+	/**
 	 * The x-coordinate of the first tangent.
 	 */
 	public var x1:Float;
@@ -37,16 +47,6 @@ extern class ArcTo implements ICommand
 	 * The radius of the arc.
 	 */
 	public var radius:Float;
-	
-	/**
-	 * Create a new ArcTo command.
-	 * @param	x1		The x-coordinate of the first tangent.
-	 * @param	y1		The y-coordinate of the first tangent.
-	 * @param	x2		The x-coordinate of the second tangent.
-	 * @param	y2		The y-coordinate of the second tangent.
-	 * @param	radius	The radius of the arc.
-	 */
-	public function new(x1:Float, y1:Float, x2:Float, y2:Float, radius:Float);
 	
 	/**
 	 * Execute the Graphics command in the provided Canvas context.

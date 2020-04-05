@@ -17,6 +17,17 @@ import js.html.CanvasRenderingContext2D;
 extern class PolyStar implements ICommand 
 {
 	/**
+	 * Create a new PolyStar command.
+	 * @param	x			Position of the center of the shape.
+	 * @param	y			Position of the center of the shape.
+	 * @param	radius		The outer radius of the shape.
+	 * @param	sides		The number of points on the star or sides on the polygon.
+	 * @param	pointSize	The depth or "pointy-ness" of the star points. A pointSize of 0 will draw a regular polygon (no points), a pointSize of 1 will draw nothing because the points are infinitely pointy.
+	 * @param	angle		The angle of the first point / corner. For example a value of 0 will draw the first point directly to the right of the center.
+	 */
+	public function new(x:Float, y:Float, radius:Float, sides:Float, pointSize:Float, angle:Float);
+	
+	/**
 	 * Position of the center of the shape.
 	 */
 	public var x:Float;
@@ -47,17 +58,6 @@ extern class PolyStar implements ICommand
 	 * For example a value of 0 will draw the first point directly to the right of the center.
 	 */
 	public var angle:Float;
-	
-	/**
-	 * Create a new PolyStar command.
-	 * @param	x			Position of the center of the shape.
-	 * @param	y			Position of the center of the shape.
-	 * @param	radius		The outer radius of the shape.
-	 * @param	sides		The number of points on the star or sides on the polygon.
-	 * @param	pointSize	The depth or "pointy-ness" of the star points. A pointSize of 0 will draw a regular polygon (no points), a pointSize of 1 will draw nothing because the points are infinitely pointy.
-	 * @param	angle		The angle of the first point / corner. For example a value of 0 will draw the first point directly to the right of the center.
-	 */
-	public function new(x:Float, y:Float, radius:Float, sides:Float, pointSize:Float, angle:Float);
 	
 	/**
 	 * Execute the Graphics command in the provided Canvas context.

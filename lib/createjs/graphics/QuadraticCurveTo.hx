@@ -22,6 +22,15 @@ import js.html.CanvasRenderingContext2D;
 extern class QuadraticCurveTo implements ICommand 
 {
 	/**
+	 * Create a new QuadraticCurveTo command.
+	 * @param	cpx	The x-coordinate of the Bézier control point.
+	 * @param	cpy	The y-coordinate of the Bézier control point.
+	 * @param	x	The x-coordinate of the ending point.
+	 * @param	y	The y-coordinate of the ending point.
+	 */
+	public function new(cpx:Float, cpy:Float, x:Float, y:Float);
+	
+	/**
 	 * The x-coordinate of the ending point.
 	 */
 	public var x:Float;
@@ -40,15 +49,6 @@ extern class QuadraticCurveTo implements ICommand
 	 * The y-coordinate of the Bézier control point.
 	 */
 	public var cpy:Float;
-	
-	/**
-	 * Create a new QuadraticCurveTo command.
-	 * @param	cpx	The x-coordinate of the Bézier control point.
-	 * @param	cpy	The y-coordinate of the Bézier control point.
-	 * @param	x	The x-coordinate of the ending point.
-	 * @param	y	The y-coordinate of the ending point.
-	 */
-	public function new(cpx:Float, cpy:Float, x:Float, y:Float);
 	
 	/**
 	 * Execute the Graphics command in the provided Canvas context.
