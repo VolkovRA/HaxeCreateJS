@@ -47,6 +47,7 @@ class Main
 		trace(TextAlign);
 		trace(TextBaseline);
 		trace(Metrics);
+		trace(BitmapText);
 		
 		// events
 		trace(Event);
