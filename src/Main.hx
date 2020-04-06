@@ -11,7 +11,6 @@ import createjs.sheet.*;
 import createjs.tween.*;
 import createjs.ui.*;
 import createjs.utils.*;
-import createjs.utils.UID;
 
 /**
  * ...
@@ -122,5 +121,8 @@ class Main
 		trace(UtilityMethods);
 		trace(Touch);
 		trace(UID);
+		trace(Ticker);
+		trace(TimingMode);
+		trace(ButtonHelper);
 	}
 }
