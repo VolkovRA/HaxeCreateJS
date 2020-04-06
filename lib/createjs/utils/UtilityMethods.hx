@@ -1,4 +1,4 @@
-package createjs;
+package createjs.utils;
 
 import js.lib.Function;
 
@@ -8,7 +8,7 @@ import js.lib.Function;
  * @author VolkovRA
  */
 @:native("createjs")
-extern class Utility 
+extern class UtilityMethods 
 {
 	/**
 	 * Wraps deprecated methods so they still be used, but throw warnings to developers.
