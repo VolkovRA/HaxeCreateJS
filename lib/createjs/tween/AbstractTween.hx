@@ -5,6 +5,14 @@ import haxe.DynamicAccess;
 
 /**
  * Base class that both Tween and Timeline extend. Should not be instantiated directly.
+ * 
+ * EVENTS
+ * Event.CHANGE				Dispatched whenever the tween's position changes. It occurs after all tweened properties
+ * 							are updated and actions are executed.
+ * 
+ * Event.COMPLETE			Dispatched when the tween reaches its end and has paused itself. This does not fire until
+ * 							all loops are complete; tweens that loop continuously will never fire a complete event.
+ * 
  * Documentation: https://www.createjs.com/docs/tweenjs/classes/AbstractTween.html
  * @author VolkovRA
  */
