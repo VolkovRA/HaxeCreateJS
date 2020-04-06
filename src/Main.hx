@@ -10,6 +10,7 @@ import createjs.plugin.*;
 import createjs.sheet.*;
 import createjs.tween.*;
 import createjs.ui.*;
+import createjs.utils.*;
 
 /**
  * ...
@@ -118,5 +119,8 @@ class Main
 		
 		// ui
 		trace(MouseCursor);
+		
+		// utils
+		trace(WebGLInspector);
 	}
 }
