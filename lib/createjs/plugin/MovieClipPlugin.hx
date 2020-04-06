@@ -1,4 +1,4 @@
-package createjs.utils;
+package createjs.plugin;
 
 import createjs.tween.Tween;
 

@@ -6,11 +6,11 @@ import createjs.events.*;
 import createjs.filters.*;
 import createjs.geom.*;
 import createjs.graphics.*;
+import createjs.plugin.*;
 import createjs.sheet.*;
 import createjs.tween.*;
 import createjs.ui.*;
 import createjs.utils.*;
-import createjs.ui.Touch;
 
 /**
  * ...
@@ -130,6 +130,8 @@ class Main
 		trace(Ticker);
 		trace(TimingMode);
 		trace(ButtonHelper);
+		
+		// plugin
 		trace(MovieClipPlugin);
 	}
 }
