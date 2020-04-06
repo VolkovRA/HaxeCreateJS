@@ -1,4 +1,4 @@
-package createjs.utils;
+package createjs.ui;
 
 import createjs.display.Stage;
 

@@ -10,6 +10,7 @@ import createjs.sheet.*;
 import createjs.tween.*;
 import createjs.ui.*;
 import createjs.utils.*;
+import createjs.ui.Touch;
 
 /**
  * ...
@@ -115,12 +116,12 @@ class Main
 		
 		// ui
 		trace(MouseCursor);
+		trace(Touch);
 		
 		// utils
 		trace(WebGLInspector);
 		trace(VideoBuffer);
 		trace(UtilityMethods);
-		trace(Touch);
 		trace(UID);
 		trace(Ticker);
 		trace(TimingMode);
