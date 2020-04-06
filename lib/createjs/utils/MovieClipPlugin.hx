@@ -1,5 +1,7 @@
 package createjs.utils;
 
+import createjs.tween.Tween;
+
 /**
  * This plugin works with TweenJS to prevent the `startPosition` property from tweening.
  * MovieClipPlugin cannot be instantiated.

@@ -113,6 +113,10 @@ class Main
 		trace(AbstractTweenConfig);
 		trace(TimelineConfig);
 		trace(TweenConfig);
+		trace(AbstractTween);
+		trace(Ease);
+		trace(Tween);
+		trace(TweenLabel);
 		
 		// ui
 		trace(MouseCursor);
