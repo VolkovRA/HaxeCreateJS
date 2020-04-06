@@ -1,4 +1,4 @@
-package createjs;
+package createjs.utils;
 
 /**
  * Global utility for generating sequential unique ID numbers.
