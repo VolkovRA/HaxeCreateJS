@@ -11,6 +11,7 @@ import createjs.sheet.*;
 import createjs.tween.*;
 import createjs.ui.*;
 import createjs.utils.*;
+import createjs.utils.UID;
 
 /**
  * ...
@@ -22,11 +23,6 @@ class Main
 	static function main() 
 	{
 		trace(EaselJS);
-		trace(Stage);
-		trace(Ticker);
-		trace(TimingMode.TIMEOUT);
-		trace(UID);
-		trace(Utility);
 		
 		// display
 		trace(Bitmap);
@@ -122,5 +118,9 @@ class Main
 		
 		// utils
 		trace(WebGLInspector);
+		trace(VideoBuffer);
+		trace(UtilityMethods);
+		trace(Touch);
+		trace(UID);
 	}
 }
