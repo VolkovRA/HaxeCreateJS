@@ -46,6 +46,8 @@ class Main
 		trace(Shadow);
 		trace(Shape);
 		trace(Sprite);
+		trace(Stage);
+		trace(StageGL);
 		
 		// events
 		trace(Event);
