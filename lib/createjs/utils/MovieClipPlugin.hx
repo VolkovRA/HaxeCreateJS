@@ -1,4 +1,4 @@
-package createjs.plugin;
+package createjs.utils;
 
 /**
  * This plugin works with TweenJS to prevent the `startPosition` property from tweening.

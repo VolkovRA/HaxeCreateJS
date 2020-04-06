@@ -6,7 +6,6 @@ import createjs.events.*;
 import createjs.filters.*;
 import createjs.geom.*;
 import createjs.graphics.*;
-import createjs.plugin.*;
 import createjs.sheet.*;
 import createjs.tween.*;
 import createjs.ui.*;
@@ -94,9 +93,6 @@ class Main
 		trace(StrokeDash);
 		trace(StrokeStyle);
 		
-		// plugin
-		trace(MovieClipPlugin);
-		
 		// sheet
 		trace(Animation);
 		trace(AnimationName);
@@ -124,5 +120,6 @@ class Main
 		trace(Ticker);
 		trace(TimingMode);
 		trace(ButtonHelper);
+		trace(MovieClipPlugin);
 	}
 }
