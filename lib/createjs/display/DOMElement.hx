@@ -83,7 +83,7 @@ import js.html.Element;
  * Documentation: https://www.createjs.com/docs/easeljs/classes/DOMElement.html
  * @author VolkovRA
  */
-@:native("createjs.DisplayObject")
+@:native("createjs.DOMElement")
 extern class DOMElement<T:Element> extends DisplayObject 
 {
 	/**

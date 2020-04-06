@@ -72,7 +72,7 @@ import js.html.CanvasRenderingContext2D;
  * Documentation: https://www.createjs.com/docs/easeljs/classes/Bitmap.html
  * @author VolkovRA
  */
-@:native("createjs.MovieClip")
+@:native("createjs.Bitmap")
 extern class Bitmap extends DisplayObject 
 {
 	/**
