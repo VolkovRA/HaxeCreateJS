@@ -2,10 +2,8 @@ package createjs.display;
 
 import createjs.events.Event;
 import createjs.geom.Rectangle;
-import haxe.extern.EitherType;
 import js.html.CanvasElement;
 import js.html.CanvasRenderingContext2D;
-import js.html.Element;
 
 /**
  * A stage is the root level Container for a display list.
@@ -110,7 +108,8 @@ extern class Stage extends Container
 	 * Create a new Stage.
 	 * @param	canvas	A canvas object that the Stage will render to, or the string id of a canvas object in the current document.
 	 */
-	public function new(canvas:EitherType<String, Element>);
+	@:overload(function(id:String):Void {})
+	public function new(canvas:CanvasElement);
 	
 	
 	
@@ -162,12 +161,6 @@ extern class Stage extends Container
 	 * through to display object tick handlers, instead of delta and paused parameters.
 	 */
 	public var handleEvent:Event->Void;
-	
-	/**
-	 * The hitArea property is not supported for Stage.
-	 * Default: null
-	 */
-	override public var hitArea:DisplayObject;
 	
 	/**
 	 * Indicates whether the mouse is currently within the bounds of the canvas.
