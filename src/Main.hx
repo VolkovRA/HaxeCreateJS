@@ -43,6 +43,10 @@ class Main
 		trace(Sprite);
 		trace(Stage);
 		trace(StageGL);
+		trace(Text);
+		trace(TextAlign);
+		trace(TextBaseline);
+		trace(Metrics);
 		
 		// events
 		trace(Event);
