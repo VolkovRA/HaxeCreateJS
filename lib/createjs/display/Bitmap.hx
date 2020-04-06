@@ -82,8 +82,8 @@ extern class Bitmap extends DisplayObject
 	 * 					returns a CanvasImageSource, or a string URL to an image. If the latter, a new Image instance
 	 * 					with the URL as its src will be used.
 	 */
-	@:overload(function(url:String){})
-	@:overload(function(config:BitmapConfig){})
+	@:overload(function(url:String):Void {})
+	@:overload(function(config:BitmapConfig):Void {})
 	public function new(source:CanvasImageSource);
 	
 	
