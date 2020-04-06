@@ -1,5 +1,6 @@
 package createjs.filters;
 
+import createjs.display.StageGL;
 import createjs.geom.Rectangle;
 import js.html.CanvasRenderingContext2D;
 import js.html.webgl.RenderingContext;
