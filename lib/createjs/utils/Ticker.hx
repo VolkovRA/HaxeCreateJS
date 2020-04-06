@@ -1,9 +1,10 @@
-package createjs;
+package createjs.utils;
 
 import createjs.events.Event;
 import createjs.events.EventObject;
 import createjs.events.Listener;
 import createjs.events.ListenerCallback;
+import createjs.utils.TimingMode;
 
 /**
  * The Ticker provides a centralized tick or heartbeat broadcast at a set interval.

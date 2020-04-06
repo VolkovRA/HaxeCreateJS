@@ -1,4 +1,4 @@
-package createjs;
+package createjs.utils;
 
 /**
  * Specifies the timing api (setTimeout or requestAnimationFrame) and mode to use.
