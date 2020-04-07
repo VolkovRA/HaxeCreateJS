@@ -2,7 +2,7 @@ package createjs.utils;
 
 /**
  * Convenience methods for creating various elements used by PrelaodJS.
- * Documentation: https://www.createjs.com/docs/easeljs/classes/Utility%20Methods.html
+ * Documentation: https://www.createjs.com/docs/preloadjs/classes/DomUtils.html
  * @author VolkovRA
  */
 @:native("createjs.DomUtils")
