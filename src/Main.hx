@@ -155,5 +155,6 @@ class Main
 		trace(Method);
 		trace(LoadItem);
 		trace(LoadItemObject);
+		trace(AbstractMediaLoader);
 	}
 }
