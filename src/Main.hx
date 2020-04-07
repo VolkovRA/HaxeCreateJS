@@ -24,6 +24,7 @@ class Main
 		trace(EaselJS);
 		trace(TweenJS);
 		trace(SoundJS);
+		trace(PreloadJS);
 		
 		// display
 		trace(Bitmap);
