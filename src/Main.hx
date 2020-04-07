@@ -22,6 +22,8 @@ class Main
 	static function main() 
 	{
 		trace(EaselJS);
+		trace(TweenJS);
+		trace(SoundJS);
 		
 		// display
 		trace(Bitmap);
