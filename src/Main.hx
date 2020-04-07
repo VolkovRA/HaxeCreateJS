@@ -151,5 +151,6 @@ class Main
 		
 		// loader
 		trace(LoadType);
+		trace(AbstractLoader);
 	}
 }
