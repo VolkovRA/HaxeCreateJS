@@ -153,5 +153,7 @@ class Main
 		trace(Type);
 		trace(AbstractLoader);
 		trace(Method);
+		trace(LoadItem);
+		trace(LoadItemObject);
 	}
 }
