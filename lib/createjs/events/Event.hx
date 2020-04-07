@@ -1,6 +1,7 @@
 package createjs.events;
 
 import createjs.sheet.Frame;
+import createjs.loader.AbstractLoader;
 
 /**
  * Contains properties and methods shared by all events for use with EventDispatcher.
@@ -157,6 +158,26 @@ extern class Event
 	 */
 	public static inline var UNLOAD:String = "unload";
 	
+	/**
+	 * The `Event.FILE_ERROR` constant defines the value of the `type` property of an `fileerror` Event object.
+	 */
+	public static inline var FILE_ERROR:String = "fileerror";
+	
+	/**
+	 * The `Event.FILE_LOAD` constant defines the value of the `type` property of an `fileload` Event object.
+	 */
+	public static inline var FILE_LOAD:String = "fileload";
+	
+	/**
+	 * The `Event.INITIALIZE` constant defines the value of the `type` property of an `initialize` Event object.
+	 */
+	public static inline var INITIALIZE:String = "initialize";
+	
+	/**
+	 * The `Event.LOADSTART` constant defines the value of the `type` property of an `loadstart` Event object.
+	 */
+	public static inline var LOADSTART:String = "loadstart";
+	
 	
 	
 	////////////////////
@@ -303,6 +324,30 @@ extern class Event
 	 * Default: null
 	 */
 	public var params:Dynamic;
+	
+	/**
+	 * The item.
+	 * Default: null
+	 */
+	public var item:Dynamic;
+	
+	/**
+	 * The result data.
+	 * Default: null
+	 */
+	public var result:Dynamic;
+	
+	/**
+	 * The raw result data.
+	 * Default: null
+	 */
+	public var rawResult:Dynamic;
+	
+	/**
+	 * The loader.
+	 * Default: null
+	 */
+	public var loader:AbstractLoader;
 	
 	
 	
