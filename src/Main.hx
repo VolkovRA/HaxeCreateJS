@@ -117,6 +117,8 @@ class Main
 		trace(Ease);
 		trace(Tween);
 		trace(TweenLabel);
+		trace(Timeline);
+		trace(TweenStep);
 		
 		// ui
 		trace(MouseCursor);

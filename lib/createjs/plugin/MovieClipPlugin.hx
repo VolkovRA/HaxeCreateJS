@@ -1,6 +1,7 @@
 package createjs.plugin;
 
 import createjs.tween.Tween;
+import createjs.tween.TweenStep;
 
 /**
  * This plugin works with TweenJS to prevent the `startPosition` property from tweening.
