@@ -139,5 +139,6 @@ class Main
 		trace(RotationPlugin);
 		trace(RelativePlugin);
 		trace(MotionGuidePlugin);
+		trace(CSSPlugin);
 	}
 }
