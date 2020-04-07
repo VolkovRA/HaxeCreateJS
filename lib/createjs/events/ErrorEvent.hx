@@ -23,7 +23,7 @@ extern class ErrorEvent extends Event
 	////////////////
 	
 	/**
-	 * The `Event.ERROR` constant defines the value of the `type` property of an `error` Event object.
+	 * The `ErrorEvent.ERROR` constant defines the value of the `type` property of an `error` Event object.
 	 */
 	public static inline var ERROR:String = "error";
 	

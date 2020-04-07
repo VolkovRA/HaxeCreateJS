@@ -121,17 +121,14 @@ extern class Event
 	public static inline var COMPLETE:String = "complete";
 	
 	/**
-	 * The `Event.ERROR` constant defines the value of the `type` property of an `error` Event object.
-	 */
-	public static inline var ERROR:String = "error";
-	
-	/**
 	 * The `Event.GET_FRAME` constant defines the value of the `type` property of an `getframe` Event object.
 	 */
 	public static inline var GET_FRAME:String = "getframe";
 	
 	/**
 	 * The `Event.PROGRESS` constant defines the value of the `type` property of an `progress` Event object.
+	 * <b>Be careful, the ProgressEvent hase same value.</b>
+	 * See: https://stackoverflow.com/questions/61089271/createjs-and-two-similar-progress-event-type
 	 */
 	public static inline var PROGRESS:String = "progress";
 	
