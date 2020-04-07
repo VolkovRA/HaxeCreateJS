@@ -1,6 +1,7 @@
 package createjs.display;
 
 import createjs.geom.Rectangle;
+import createjs.tween.Timeline;
 import js.html.CanvasRenderingContext2D;
 
 /**
