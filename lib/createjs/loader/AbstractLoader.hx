@@ -107,7 +107,7 @@ extern class AbstractLoader extends EventDispatcher
 	/**
 	 * The type of item this loader will load.
 	 */
-	public var type:LoadType;
+	public var type:Type;
 	
 	
 	

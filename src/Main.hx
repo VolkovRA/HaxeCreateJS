@@ -150,7 +150,7 @@ class Main
 		trace(ColorPlugin);
 		
 		// loader
-		trace(LoadType);
+		trace(Type);
 		trace(AbstractLoader);
 	}
 }

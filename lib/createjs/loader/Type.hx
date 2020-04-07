@@ -7,7 +7,7 @@ package createjs.loader;
  * Documentation: https://www.createjs.com/docs/preloadjs/classes/Types.html
  * @author VolkovRA
  */
-@:enum abstract LoadType(String) to String
+@:enum abstract Type(String) to String
 {
 	/**
 	 * The preload type for generic binary types.
