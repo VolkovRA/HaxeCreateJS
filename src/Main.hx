@@ -6,6 +6,7 @@ import createjs.events.*;
 import createjs.filters.*;
 import createjs.geom.*;
 import createjs.graphics.*;
+import createjs.loader.*;
 import createjs.plugin.*;
 import createjs.sheet.*;
 import createjs.tween.*;
@@ -146,5 +147,8 @@ class Main
 		trace(MotionGuidePlugin);
 		trace(CSSPlugin);
 		trace(ColorPlugin);
+		
+		// loader
+		trace(LoadType);
 	}
 }
