@@ -30,11 +30,12 @@ extern class MovieClipPlugin
 	 * Called before a property is updated by the tween.
 	 * @param	tween	The related tween instance.
 	 * @param	step	The related tween step. This class is currently undocumented. See the bottom of Tween.js for info.
+	 * @param	prop	The name of the property being tweened.
 	 * @param	value	The current tweened value of the property, as calculated by TweenJS. Previous plugins may have modified this value.
 	 * @param	ratio	A value indicating the eased progress through the current step. This number is generally between 0 and 1, though some eases will generate values outside this range.
 	 * @param	end		Indicates that the tween has reached the end and is about to deregister itself.
 	 */
-	static public function change(tween:Tween, step:TweenStep, value:Any, ratio:Float, end:Dynamic):Void;
+	static public function change(tween:Tween, step:TweenStep, prop:String, value:Any, ratio:Float, end:Bool):Void;
 	
 	/**
 	 * Called by TweenJS when a new property initializes on a tween.
