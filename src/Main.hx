@@ -138,6 +138,7 @@ class Main
 		trace(Ticker);
 		trace(TimingMode);
 		trace(ButtonHelper);
+		trace(DomUtils);
 		
 		// plugin
 		trace(MovieClipPlugin);
