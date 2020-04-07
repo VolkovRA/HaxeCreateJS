@@ -62,6 +62,7 @@ class Main
 		trace(ListenerCallback);
 		trace(ListenerObject);
 		trace(MouseEvent);
+		trace(ErrorEvent);
 		
 		// filters
 		trace(AlphaMapFilter);
