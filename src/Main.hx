@@ -136,5 +136,6 @@ class Main
 		// plugin
 		trace(MovieClipPlugin);
 		trace(SamplePlugin);
+		trace(RotationPlugin);
 	}
 }
