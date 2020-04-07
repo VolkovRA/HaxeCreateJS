@@ -226,6 +226,13 @@ extern class Tween extends AbstractTween
 	public function wait(duration:Float, passive:Bool = false):Tween;
 	
 	/**
+	 * Tween can not be cloned.
+	 */
+	@:deprecated
+	@:noCompletion
+	override public function clone():Tween;
+	
+	/**
 	 * Returns a string representation of this Tween.
 	 * @return A string representation of the instance.
 	 */
