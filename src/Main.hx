@@ -135,5 +135,6 @@ class Main
 		
 		// plugin
 		trace(MovieClipPlugin);
+		trace(SamplePlugin);
 	}
 }
