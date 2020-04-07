@@ -140,5 +140,6 @@ class Main
 		trace(RelativePlugin);
 		trace(MotionGuidePlugin);
 		trace(CSSPlugin);
+		trace(ColorPlugin);
 	}
 }
