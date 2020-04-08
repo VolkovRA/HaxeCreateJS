@@ -33,11 +33,11 @@ package createjs.loader;
 extern class BinaryLoader extends AbstractLoader 
 {
 	/**
-	 * Create a new AbstractLoader.
-	 * @param	loadItem	Load item.
+	 * Create a new BinaryLoader.
+	 * @param	item	The item to be loaded.
 	 */
-	@:overload(function(loadItem:LoadItemObject):Void{})
-	public function new(loadItem:LoadItem);
+	@:overload(function(item:LoadItemObject):Void{})
+	public function new(item:LoadItem);
 	
 	/**
 	 * Determines if the loader can load a specific item.

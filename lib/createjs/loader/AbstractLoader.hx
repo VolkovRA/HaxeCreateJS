@@ -39,8 +39,12 @@ extern class AbstractLoader extends EventDispatcher
 {
 	/**
 	 * Create a new AbstractLoader.
+	 * @param	item		The item to be loaded.
+	 * @param	preferXHR	Whether the loader will try and load content using XHR (true) or HTML tags (false).
+	 * @param	type		The type of item this loader will load.
 	 */
-	public function new();
+	@:overload(function(item:LoadItemObject, preferXHR:Bool, type:Type):Void{})
+	public function new(item:LoadItem, preferXHR:Bool, type:Type);
 	
 	
 	

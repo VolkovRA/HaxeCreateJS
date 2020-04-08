@@ -34,18 +34,12 @@ extern class AbstractMediaLoader extends AbstractLoader
 {
 	/**
 	 * Create a new AbstractMediaLoader.
-	 * @param	loadItem	Load config item.
-	 * @param	preferXHR	If you want to force tag loading where possible, set the preferXHR argument to false.
+	 * @param	item		The item to be loaded.
+	 * @param	preferXHR	Whether the loader will try and load content using XHR (true) or HTML tags (false).
 	 * @param	type		The type of item this loader will load.
 	 */
-	@:overload(function(loadItem:LoadItemObject, preferXHR:Bool, type:Type):Void{})
-	public function new(loadItem:LoadItem, preferXHR:Bool, type:Type);
-	
-	
-	
-	//////////////////
-	//   OVERRIDE   //
-	//////////////////
+	@:overload(function(item:LoadItemObject, preferXHR:Bool, type:Type):Void{})
+	public function new(item:LoadItem, preferXHR:Bool, type:Type);
 	
 	/**
 	 * Returns a string representation of this AbstractMediaLoader.
