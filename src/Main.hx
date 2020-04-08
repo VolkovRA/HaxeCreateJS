@@ -175,5 +175,6 @@ class Main
 		trace(VideoLoader);
 		trace(XMLLoader);
 		trace(TagRequest);
+		trace(XHRRequest);
 	}
 }
