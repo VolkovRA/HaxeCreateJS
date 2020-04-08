@@ -142,6 +142,7 @@ class Main
 		trace(DataUtils);
 		trace(URLUtils);
 		trace(URIInfo);
+		trace(RequestUtils);
 		
 		// plugin
 		trace(MovieClipPlugin);
