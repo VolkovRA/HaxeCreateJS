@@ -169,5 +169,6 @@ class Main
 		trace(SoundLoader);
 		trace(SpriteSheetLoader);
 		trace(SVGLoader);
+		trace(TextLoader);
 	}
 }
