@@ -158,5 +158,6 @@ class Main
 		trace(AbstractMediaLoader);
 		trace(AbstractRequest);
 		trace(BinaryLoader);
+		trace(CSSLoader);
 	}
 }
