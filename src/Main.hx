@@ -165,5 +165,6 @@ class Main
 		trace(JavaScriptLoader);
 		trace(JSONLoader);
 		trace(JSONPLoader);
+		trace(ManifestLoader);
 	}
 }
