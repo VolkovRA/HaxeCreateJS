@@ -166,5 +166,6 @@ class Main
 		trace(JSONLoader);
 		trace(JSONPLoader);
 		trace(ManifestLoader);
+		trace(SoundLoader);
 	}
 }
