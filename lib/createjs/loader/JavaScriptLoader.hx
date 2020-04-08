@@ -41,7 +41,7 @@ extern class JavaScriptLoader extends AbstractLoader
 	
 	/**
 	 * Determines if the loader can load a specific item.
-	 * This loader can only load items that are of type JAVASCRIPT
+	 * This loader can only load items that are of type JAVASCRIPT.
 	 * @param	item	The LoadItem that a LoadQueue is trying to load.
 	 * @return	Whether the loader can load the item.
 	 */
