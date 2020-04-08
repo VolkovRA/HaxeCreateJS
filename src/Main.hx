@@ -140,6 +140,8 @@ class Main
 		trace(ButtonHelper);
 		trace(DomUtils);
 		trace(DataUtils);
+		trace(URLUtils);
+		trace(URIInfo);
 		
 		// plugin
 		trace(MovieClipPlugin);
