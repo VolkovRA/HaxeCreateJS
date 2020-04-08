@@ -162,5 +162,6 @@ class Main
 		trace(CSSLoader);
 		trace(FontLoader);
 		trace(ImageLoader);
+		trace(JavaScriptLoader);
 	}
 }
