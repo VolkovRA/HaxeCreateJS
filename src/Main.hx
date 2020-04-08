@@ -160,5 +160,6 @@ class Main
 		trace(AbstractRequest);
 		trace(BinaryLoader);
 		trace(CSSLoader);
+		trace(FontLoader);
 	}
 }
