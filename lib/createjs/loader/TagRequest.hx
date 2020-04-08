@@ -14,7 +14,7 @@ import js.html.HtmlElement;
  * @author VolkovRA
  */
 @:native("createjs.TagRequest")
-extern class TagRequest extends AbstractRequest 
+extern class TagRequest extends AbstractRequest
 {
 	/**
 	 * Create a new TagRequest.
@@ -22,5 +22,6 @@ extern class TagRequest extends AbstractRequest
 	 * @param	tag				The HTML tag instance that is used to load.
 	 * @param	srcAttribute	The tag attribute that specifies the source, such as "src", "href", etc.
 	 */
+	@:overload(function(item:LoadItemObject, tag:HtmlElement, srcAttribute:String):Void{})
 	public function new(item:LoadItem, tag:HtmlElement, srcAttribute:String);
 }
