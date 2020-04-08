@@ -157,5 +157,6 @@ class Main
 		trace(LoadItemObject);
 		trace(AbstractMediaLoader);
 		trace(AbstractRequest);
+		trace(BinaryLoader);
 	}
 }
