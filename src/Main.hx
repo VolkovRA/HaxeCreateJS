@@ -171,5 +171,6 @@ class Main
 		trace(SVGLoader);
 		trace(TextLoader);
 		trace(VideoLoader);
+		trace(XMLLoader);
 	}
 }
