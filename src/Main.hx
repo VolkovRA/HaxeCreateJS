@@ -161,5 +161,6 @@ class Main
 		trace(BinaryLoader);
 		trace(CSSLoader);
 		trace(FontLoader);
+		trace(ImageLoader);
 	}
 }
