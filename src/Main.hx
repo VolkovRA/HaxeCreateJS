@@ -174,5 +174,6 @@ class Main
 		trace(TextLoader);
 		trace(VideoLoader);
 		trace(XMLLoader);
+		trace(TagRequest);
 	}
 }

@@ -178,6 +178,11 @@ extern class Event
 	 */
 	public static inline var LOADSTART:String = "loadstart";
 	
+	/**
+	 * The `Event.TIMEOUT` constant defines the value of the `type` property of an `timeout` Event object.
+	 */
+	public static inline var TIMEOUT:String = "timeout";
+	
 	
 	
 	////////////////////

@@ -1,5 +1,7 @@
 package createjs.loader;
 
+import createjs.events.EventDispatcher;
+
 /**
  * A base class for actual data requests, such as XHRRequest, TagRequest, and MediaRequest.
  * PreloadJS loaders will typically use a data loader under the hood to get data.
@@ -8,7 +10,7 @@ package createjs.loader;
  * @author VolkovRA
  */
 @:native("createjs.AbstractRequest")
-extern class AbstractRequest 
+extern class AbstractRequest extends EventDispatcher
 {
 	/**
 	 * Create a new AbstractRequest.
