@@ -139,6 +139,7 @@ class Main
 		trace(TimingMode);
 		trace(ButtonHelper);
 		trace(DomUtils);
+		trace(DataUtils);
 		
 		// plugin
 		trace(MovieClipPlugin);
