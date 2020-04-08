@@ -164,5 +164,6 @@ class Main
 		trace(ImageLoader);
 		trace(JavaScriptLoader);
 		trace(JSONLoader);
+		trace(JSONPLoader);
 	}
 }
