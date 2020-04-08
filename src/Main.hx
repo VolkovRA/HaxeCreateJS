@@ -170,5 +170,6 @@ class Main
 		trace(SpriteSheetLoader);
 		trace(SVGLoader);
 		trace(TextLoader);
+		trace(VideoLoader);
 	}
 }
