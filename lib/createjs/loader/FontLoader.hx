@@ -34,7 +34,7 @@ import js.lib.RegExp;
  * 							If the error was encountered by a file, the event will contain the item that caused the error.
  * 							Prior to version 0.6.0, this was just a regular Event.
  * 
- * Documentation: https://www.createjs.com/docs/preloadjs/classes/CSSLoader.html
+ * Documentation: https://www.createjs.com/docs/preloadjs/classes/FontLoader.html
  * @author VolkovRA
  */
 @:native("createjs.FontLoader")
@@ -43,7 +43,6 @@ extern class FontLoader extends AbstractLoader
 	/**
 	 * Create a new FontLoader.
 	 * @param	item		The item to be loaded.
-	 * @param	preferXHR	Whether the loader will try and load content using XHR (true) or HTML tags (false).
 	 */
 	@:overload(function(item:LoadItemObject):Void{})
 	public function new(item:LoadItem);
