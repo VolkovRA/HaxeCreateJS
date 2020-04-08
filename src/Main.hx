@@ -163,5 +163,6 @@ class Main
 		trace(FontLoader);
 		trace(ImageLoader);
 		trace(JavaScriptLoader);
+		trace(JSONLoader);
 	}
 }
