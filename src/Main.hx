@@ -201,5 +201,6 @@ class Main
 		trace(FlashAudioSoundInstance);
 		trace(CordovaAudioSoundInstance);
 		trace(HTMLAudioTagPool);
+		trace(Sound);
 	}
 }
