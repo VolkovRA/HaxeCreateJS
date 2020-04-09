@@ -157,6 +157,7 @@ class Main
 		trace(CordovaAudioPlugin);
 		trace(FlashAudioPlugin);
 		trace(HTMLAudioPlugin);
+		trace(WebAudioPlugin);
 		
 		// loader
 		trace(Type);
