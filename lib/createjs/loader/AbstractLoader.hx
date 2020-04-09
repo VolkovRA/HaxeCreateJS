@@ -22,7 +22,7 @@ import js.lib.Function;
  * Event.INITIALIZE			The Event that is fired after the internal request is created, but before a load.
  * 							This allows updates to the loader for specific loading needs, such as binary or XHR image loading.
  * 
- * Event.LOADSTART			The Event that is fired when a load starts.
+ * Event.LOAD_START			The Event that is fired when a load starts.
  * 
  * ProgressEvent.PROGRESS	The ProgressEvent that is fired when the overall progress changes.
  * 							Prior to version 0.6.0, this was just a regular Event.
@@ -137,14 +137,14 @@ extern class AbstractLoader extends EventDispatcher
 	 * However if only a String path was passed in, then it will be a LoadItem.
 	 * @return	The manifest item that this loader is responsible for loading.
 	 */
-	public function getItem():Dynamic;
+	public function getItem():EitherType<LoadItem, LoadItemObject>;
 	
 	/**
 	 * Get any items loaded internally by the loader.
 	 * The enables loaders such as ManifestLoader to expose items it loads internally.
 	 * @return	A list of the items loaded by the loader.
 	 */
-	public function getLoadedItems():Array<Dynamic>;
+	public function getLoadedItems():Array<EitherType<LoadItem, LoadItemObject>>;
 	
 	/**
 	 * Get a reference to the content that was loaded by the loader (only available after the Complete:event event is dispatched.

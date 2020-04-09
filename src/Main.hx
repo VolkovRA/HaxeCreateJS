@@ -178,5 +178,7 @@ class Main
 		trace(TagRequest);
 		trace(XHRRequest);
 		trace(MediaTagRequest);
+		trace(LoadQueue);
+		trace(Manifest);
 	}
 }
