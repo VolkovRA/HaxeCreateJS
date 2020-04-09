@@ -159,6 +159,11 @@ extern class Event
 	public static inline var UNLOAD:String = "unload";
 	
 	/**
+	 * The `Event.FILE_START` constant defines the value of the `type` property of an `filestart` Event object.
+	 */
+	public static inline var FILE_START:String = "filestart";
+	
+	/**
 	 * The `Event.FILE_ERROR` constant defines the value of the `type` property of an `fileerror` Event object.
 	 */
 	public static inline var FILE_ERROR:String = "fileerror";
@@ -174,9 +179,9 @@ extern class Event
 	public static inline var INITIALIZE:String = "initialize";
 	
 	/**
-	 * The `Event.LOADSTART` constant defines the value of the `type` property of an `loadstart` Event object.
+	 * The `Event.LOAD_START` constant defines the value of the `type` property of an `loadstart` Event object.
 	 */
-	public static inline var LOADSTART:String = "loadstart";
+	public static inline var LOAD_START:String = "loadstart";
 	
 	/**
 	 * The `Event.TIMEOUT` constant defines the value of the `type` property of an `timeout` Event object.

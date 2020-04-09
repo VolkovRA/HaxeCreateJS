@@ -17,7 +17,7 @@ package createjs.loader;
  * Event.INITIALIZE			The Event that is fired after the internal request is created, but before a load.
  * 							This allows updates to the loader for specific loading needs, such as binary or XHR image loading.
  * 
- * Event.LOADSTART			The Event that is fired when a load starts.
+ * Event.LOAD_START			The Event that is fired when a load starts.
  * 
  * ProgressEvent.PROGRESS	The ProgressEvent that is fired when the overall progress changes.
  * 							Prior to version 0.6.0, this was just a regular Event.

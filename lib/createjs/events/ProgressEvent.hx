@@ -26,6 +26,10 @@ extern class ProgressEvent extends Event
 	 */
 	public static inline var PROGRESS:String = "progress";
 	
+	/**
+	 * The `ProgressEvent.FILE_PROGRESS` constant defines the value of the `type` property of an `fileprogress` Event object.
+	 */
+	public static inline var FILE_PROGRESS:String = "fileprogress";
 	
 	
 	////////////////////
