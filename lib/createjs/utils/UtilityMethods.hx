@@ -1,5 +1,6 @@
 package createjs.utils;
 
+import haxe.extern.Rest;
 import js.lib.Function;
 
 /**
@@ -95,4 +96,23 @@ extern class UtilityMethods
 	 * @return	Returns the subclass.
 	 */
 	static public function promote(subclass:Function, prefix:String):Function;
+	
+	/**
+	 * A function proxy for methods.
+	 * By default, JavaScript methods do not maintain scope, so passing a method as a callback will result in the
+	 * method getting called in the scope of the caller. Using a proxy ensures that the method gets called in the correct scope.
+	 * 
+	 * Additional arguments can be passed that will be applied to the function when it is called.
+	 * <code>
+	 * myObject.addEventListener("event", proxy(myHandler, this, arg1, arg2));
+	 * 
+	 * function myHandler(arg1, arg2) {
+	 *     // This gets called when myObject.myCallback is executed.
+	 * }
+	 * </code>
+	 * @param	method	The function to call.
+	 * @param	scope	The scope to call the method name on.
+	 * @param	arg		Arguments that are appended to the callback for additional params.
+	 */
+	static public function proxy(method:Function, scope:Dynamic, arg:Rest<Dynamic>):Void;
 }
