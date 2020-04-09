@@ -177,5 +177,6 @@ class Main
 		trace(XMLLoader);
 		trace(TagRequest);
 		trace(XHRRequest);
+		trace(MediaTagRequest);
 	}
 }
