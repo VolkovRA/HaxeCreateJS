@@ -186,5 +186,6 @@ class Main
 		trace(PlayState);
 		trace(PlayPropsConfig);
 		trace(PlayPropsConfigObject);
+		trace(AbstractSoundInstance);
 	}
 }
