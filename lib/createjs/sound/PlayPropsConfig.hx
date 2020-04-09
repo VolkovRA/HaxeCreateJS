@@ -18,7 +18,7 @@ package createjs.sound;
  * 
  * <b>Example</b>
  * <code>
- * var props = new PlayPropsConfig().set({interrupt: createjs.Sound.INTERRUPT_ANY, loop: -1, volume: 0.5})
+ * var props = new PlayPropsConfig().set({interrupt: InterruptType.ANY, loop: -1, volume: 0.5})
  * Sound.play("mySound", props);
  * // OR
  * mySoundInstance.play(props);

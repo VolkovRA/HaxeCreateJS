@@ -173,7 +173,7 @@ extern class AbstractSoundInstance extends EventDispatcher
 	 * This method is intended to be called on SoundInstances that already exist (created with the Sound API createInstance or play).
 	 * <code>
 	 * var myInstance = Sound.createInstance(mySrc);
-	 * myInstance.play({interrupt:Sound.INTERRUPT_ANY, loop:2, pan:0.5});
+	 * myInstance.play({interrupt:InterruptType.ANY, loop:2, pan:0.5});
 	 * </code>
 	 * Note that if this sound is already playing, this call will still set the passed in parameters.
 	 * 

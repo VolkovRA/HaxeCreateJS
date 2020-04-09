@@ -11,25 +11,25 @@ package createjs.sound;
 	 * The interrupt value to interrupt any currently playing instance with the same source,
 	 * if the maximum number of instances of the sound are already playing.
 	 */
-	var INTERRUPT_ANY = "any";
+	var ANY = "any";
 	
 	/**
 	 * The interrupt value to interrupt the earliest currently playing instance with the same
 	 * source that progressed the least distance in the audio track, if the maximum number of
 	 * instances of the sound are already playing.
 	 */
-	var INTERRUPT_EARLY = "early";
+	var EARLY = "early";
 	
 	/**
 	 * The interrupt value to interrupt the currently playing instance with the same source that
 	 * progressed the most distance in the audio track, if the maximum number of instances of
 	 * the sound are already playing.
 	 */
-	var INTERRUPT_LATE = "late";
+	var LATE = "late";
 	
 	/**
 	 * The interrupt value to not interrupt any currently playing instances with the same source,
 	 * if the maximum number of instances of the sound are already playing.
 	 */
-	var INTERRUPT_NONE = "none";
+	var NONE = "none";
 }

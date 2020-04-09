@@ -10,27 +10,27 @@ package createjs.sound;
 	/**
 	 * Defines the playState of an instance that is still initializing.
 	 */
-	var PLAY_INITED  = "playInited";
+	var INITED = "playInited";
 	
 	/**
 	 * Defines the playState of an instance that is currently playing or paused.
 	 */
-	var PLAY_SUCCEEDED  = "playSucceeded";
+	var SUCCEEDED = "playSucceeded";
 	
 	/**
 	 * Defines the playState of an instance that was interrupted by another instance.
 	 */
-	var PLAY_INTERRUPTED  = "playInterrupted";
+	var INTERRUPTED = "playInterrupted";
 	
 	/**
 	 * Defines the playState of an instance that completed playback.
 	 */
-	var PLAY_FINISHED  = "playFinished";
+	var FINISHED = "playFinished";
 	
 	/**
 	 * Defines the playState of an instance that failed to play.
-	 * This is usually caused by a lack of available channels when the interrupt mode was "INTERRUPT_NONE",
+	 * This is usually caused by a lack of available channels when the interrupt mode was "InterruptType.NONE",
 	 * the playback stalled, or the sound could not be found.
 	 */
-	var PLAY_FAILED = "playFailed";
+	var FAILED = "playFailed";
 }
