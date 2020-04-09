@@ -196,5 +196,9 @@ class Main
 		trace(PlayPropsConfig);
 		trace(PlayPropsConfigObject);
 		trace(AbstractSoundInstance);
+		trace(WebAudioSoundInstance);
+		trace(HTMLAudioSoundInstance);
+		trace(FlashAudioSoundInstance);
+		trace(CordovaAudioSoundInstance);
 	}
 }
