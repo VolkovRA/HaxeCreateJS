@@ -5,7 +5,7 @@ package createjs.sound;
  * Documentation: https://www.createjs.com/docs/soundjs/classes/Sound.html
  * @author VolkovRA
  */
-@:enum abstract SoundPlayState(String) to String
+@:enum abstract PlayState(String) to String
 {
 	/**
 	 * Defines the playState of an instance that is still initializing.

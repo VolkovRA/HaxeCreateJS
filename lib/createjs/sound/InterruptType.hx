@@ -5,7 +5,7 @@ package createjs.sound;
  * Documentation: https://www.createjs.com/docs/soundjs/classes/Sound.html
  * @author VolkovRA
  */
-@:enum abstract SoundInterruptType(String) to String
+@:enum abstract InterruptType(String) to String
 {
 	/**
 	 * The interrupt value to interrupt any currently playing instance with the same source,
