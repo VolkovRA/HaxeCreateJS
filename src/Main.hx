@@ -146,7 +146,6 @@ class Main
 		
 		// plugin
 		trace(MovieClipPlugin);
-		trace(SamplePlugin);
 		trace(RotationPlugin);
 		trace(RelativePlugin);
 		trace(MotionGuidePlugin);
