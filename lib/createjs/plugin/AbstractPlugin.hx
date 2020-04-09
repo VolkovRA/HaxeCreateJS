@@ -109,4 +109,10 @@ extern  class AbstractPlugin
 	 * @return	If the plugin processes the setVolume call (true). The Sound class will affect all the instances manually otherwise.
 	 */
 	public function setVolume(value:Float):Bool;
+	
+	/**
+	 * Returns a string representation of this AbstractPlugin.
+	 * @return A string representation of the instance.
+	 */
+	public function toString():String;
 }

@@ -153,6 +153,8 @@ class Main
 		trace(MotionGuidePlugin);
 		trace(CSSPlugin);
 		trace(ColorPlugin);
+		trace(AbstractPlugin);
+		trace(CordovaAudioPlugin);
 		
 		// loader
 		trace(Type);
@@ -191,6 +193,5 @@ class Main
 		trace(PlayPropsConfig);
 		trace(PlayPropsConfigObject);
 		trace(AbstractSoundInstance);
-		trace(AbstractPlugin);
 	}
 }
