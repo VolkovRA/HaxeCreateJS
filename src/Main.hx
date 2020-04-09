@@ -144,6 +144,7 @@ class Main
 		trace(URLUtils);
 		trace(URIInfo);
 		trace(RequestUtils);
+		trace(BrowserDetect);
 		
 		// plugin
 		trace(MovieClipPlugin);
