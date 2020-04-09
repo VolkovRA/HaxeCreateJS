@@ -188,6 +188,26 @@ extern class Event
 	 */
 	public static inline var TIMEOUT:String = "timeout";
 	
+	/**
+	 * The `Event.FAILED` constant defines the value of the `type` property of an `failed` Event object.
+	 */
+	public static inline var FAILED:String = "failed";
+	
+	/**
+	 * The `Event.INTERRUPTED` constant defines the value of the `type` property of an `interrupted` Event object.
+	 */
+	public static inline var INTERRUPTED:String = "interrupted";
+		
+	/**
+	 * The `Event.LOOP` constant defines the value of the `type` property of an `loop` Event object.
+	 */
+	public static inline var LOOP:String = "loop";
+	
+	/**
+	 * The `Event.SUCCEEDED` constant defines the value of the `type` property of an `succeeded` Event object.
+	 */
+	public static inline var SUCCEEDED:String = "succeeded";
+	
 	
 	
 	////////////////////
