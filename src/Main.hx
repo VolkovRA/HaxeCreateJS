@@ -9,6 +9,7 @@ import createjs.graphics.*;
 import createjs.loader.*;
 import createjs.plugin.*;
 import createjs.sheet.*;
+import createjs.sound.*;
 import createjs.tween.*;
 import createjs.ui.*;
 import createjs.utils.*;
@@ -179,5 +180,11 @@ class Main
 		trace(MediaTagRequest);
 		trace(LoadQueue);
 		trace(Manifest);
+		
+		// sound
+		trace(InterruptType);
+		trace(PlayState);
+		trace(PlayPropsConfig);
+		trace(PlayPropsConfigObject);
 	}
 }
