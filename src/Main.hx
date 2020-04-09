@@ -181,6 +181,9 @@ class Main
 		trace(MediaTagRequest);
 		trace(LoadQueue);
 		trace(Manifest);
+		trace(CordovaAudioLoader);
+		trace(FlashAudioLoader);
+		trace(WebAudioLoader);
 		
 		// sound
 		trace(InterruptType);
