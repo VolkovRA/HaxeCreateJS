@@ -7,5 +7,5 @@
 	"version": "1.0.0",
 	"releasenote": "Release",
 	"contributors": ["VolkovRA"],
-	"classPath": "lib/createjs"
+	"classPath": "lib"
 }
